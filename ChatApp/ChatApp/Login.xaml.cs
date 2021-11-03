@@ -1,19 +1,7 @@
-﻿using DocumentFormat.OpenXml.Bibliography;
+﻿
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ChatApp
 {
@@ -82,7 +70,7 @@ namespace ChatApp
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            string connString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Bence\Documents\Users.mdf; Integrated Security = True; Connect Timeout = 30";
+            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
             var logined = false;
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -97,7 +85,7 @@ namespace ChatApp
                             if (reader.GetString(1) == LoginPassword.Text)
                             {
                                 logined = true;
-                                MainWindow mainWindow = new MainWindow();
+                                MainWindow mainWindow = new MainWindow(LoginUser.Text);
                                 mainWindow.ShowDialog();
                             }
                             else

@@ -133,11 +133,11 @@ int main()
 
 						if (outSock != sock)
 						{
-							ss << "SOCKET #" << sock << ":" << buf << "\r\n";
+							ss << buf << "\r\n";
 						}
 						else
 						{
-							ss << "ME:" << buf << "\r\n";
+							ss << buf << "\r\n";
 						}
 
 						string strOut = ss.str();
