@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sg5TL8Fk2PMqM5DqV3z7rL9pTG5xSnjq+BM4vEFmgTXScZYldqGtmND690AV7Ocn4vDFbdKDyrEfcNKQGpTb9g==",
+  "dgSpecHash": "v8WliDQM65ImnRxup06rtTPTwpPKTC76x/5HmSGr4/paytdWmS1jxB64Mbp0Sw4APrZF5jA3fzoQI4arcO/9bg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bence\\Downloads\\master\\ChatApp\\ChatApp\\ChatApp.csproj",
+  "projectFilePath": "C:\\Users\\Bence\\Desktop\\asdasd\\ChatApp\\ChatApp\\ChatApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bence\\.nuget\\packages\\documentformat.openxml\\2.13.1\\documentformat.openxml.2.13.1.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

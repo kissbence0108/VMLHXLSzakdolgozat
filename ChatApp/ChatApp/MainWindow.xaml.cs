@@ -36,7 +36,7 @@ namespace ChatApp
             base.OnContentRendered(e);
 
 
-            _client.Connect("127.0.0.1", 54000);
+            _client.Connect("localhost", 54000);
             _client.GetStream().BeginRead(_buffer,
                                             0,
                                             _buffer.Length,
