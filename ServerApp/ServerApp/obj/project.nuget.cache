@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XpD/wSnTlhUEJjxsHcJ6yGs8oVZM60NyLHHaunCCMgKj6WPqCkh5vCJnmEj7GyGs880DRjnVpKTedqSNDQmzYg==",
+  "dgSpecHash": "fHfP/Z0JZ+IoxXPj1JbEn3ReBcECok3qxD2CDXzdD17NSm3Tw3wCiHZJDI7VACRXUTOhdgUfUkkCADMjY/QWSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bence\\Desktop\\asdasd\\ServerApp\\ServerApp\\ServerApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Bence\\Documents\\GitHub\\master\\ServerApp\\ServerApp\\ServerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bence\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

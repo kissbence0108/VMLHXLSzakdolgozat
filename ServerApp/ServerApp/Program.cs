@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -113,13 +114,26 @@ public class AsynchronousSocketListener
         if (bytesRead > 0)
         {
             // There  might be more data, so store the data received so far.  
-            state.sb.Append(Encoding.ASCII.GetString(
+            state.sb.Append(Encoding.UTF8.GetString(
                 state.buffer, 0, bytesRead));
 
             // Check for end-of-file tag. If it is not there, read
             // more data.  
             content = state.sb.ToString();
+            
 
+            try
+            {
+                IDictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+            }
+            catch (Exception)
+            {
+                SendError(handler, "Hiba történt");
+                Console.WriteLine("Nem sikerült feldolgozni az üzenetet");
+                return;
+            }
+
+            
             // All the data has been read from the
             // client. Display it on the console.  
             Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
@@ -129,10 +143,25 @@ public class AsynchronousSocketListener
         }
     }
 
+    private static void SendError(Socket handler, String error)
+    {
+        IDictionary<string, string> data = new Dictionary<string, string>
+        {
+            ["error"] = error,
+            
+        };
+
+        
+
+        byte[] byteData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+        handler.BeginSend(byteData, 0, byteData.Length, 0,
+            new AsyncCallback(SendCallback), handler);
+    }
+
     private static void Send(Socket handler, String data)
     {
         // Convert the string data to byte data using ASCII encoding.  
-        byte[] byteData = Encoding.ASCII.GetBytes(data);
+        byte[] byteData = Encoding.UTF8.GetBytes(data);
 
         foreach (Socket client in tcpClientsList)
         {

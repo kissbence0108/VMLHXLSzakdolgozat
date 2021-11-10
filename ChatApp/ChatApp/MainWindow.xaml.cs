@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -19,6 +20,7 @@ namespace ChatApp
 
     public partial class MainWindow : Window
     {
+
         TcpClient _client;
         string username;
 
@@ -46,11 +48,22 @@ namespace ChatApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var msg = Encoding.ASCII.GetBytes(username +": " +textbox1.Text);
+            IDictionary<string, string> data = new Dictionary<string, string>
+            {
+                ["username"] = username,
+                ["message"] = textbox1.Text
+            };
+
+
+
+            var msg = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
+           
             _client.GetStream().Write(msg, 0, msg.Length);
+
 
             textbox1.Text = "";
             textbox1.Focus();
+
         }
 
 
@@ -66,7 +79,7 @@ namespace ChatApp
 
                     var tmp = new byte[bytesIn];
                     Array.Copy(_buffer, 0, tmp, 0, bytesIn);
-                    var str = Encoding.ASCII.GetString(tmp);
+                    var str = Encoding.UTF8.GetString(tmp);
 
 
                     
@@ -90,7 +103,5 @@ namespace ChatApp
         }
 
         
-
-
     }
 }

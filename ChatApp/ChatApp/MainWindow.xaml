@@ -7,13 +7,130 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="93*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox x:Name="textbox1"  Text="TextBox" TextWrapping="Wrap" Margin="49,308,400,39" Grid.ColumnSpan="2"/>
-        <Button Content="Button" Margin="439,244,80,62" Click="Button_Click" Grid.Column="1"/>
-        <ListBox x:Name="listBox1" Margin="49,28,445,154" RenderTransformOrigin="0.908,0.754" Grid.ColumnSpan="2"/>
+
+
+        <Grid Background="DarkGray">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="14*"/>
+                
+                <ColumnDefinition Width="179*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="textbox1"  Text="TextBox" TextWrapping="Wrap" Margin="21,320,343,27" Grid.Column="2"/>
+            <Button Content="Button" Margin="411,244,80,62" Click="Button_Click" Grid.Column="2"/>
+            <ListBox x:Name="listBox1" Margin="21,26,389,156" RenderTransformOrigin="0.908,0.754" Grid.Column="2"/>
+
+
+
+            <Grid x:Name="navigation_panel"
+                  HorizontalAlignment="Left"
+                  Width="70"
+                  Background="#2e333a" Grid.ColumnSpan="2">
+
+                <StackPanel x:Name="stack_panel">
+
+                    <Grid>
+
+                        <Grid Height="90">
+
+                            <ToggleButton x:Name="toggle_button"
+                                          Grid.Column="0"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          Margin="18,-20,0,0"
+                                          Height="30"
+                                          Width="30"
+                                          BorderThickness="0">
+
+                                <ToggleButton.Background>
+
+                                    <ImageBrush ImageSource="Resources/toggle.png">
+
+                                    </ImageBrush>
+                                </ToggleButton.Background>
+
+
+                                <ToggleButton.Triggers>
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                                        <BeginStoryboard>
+
+                                            <Storyboard x:Name="HideStackPanel">
+
+                                                <DoubleAnimation
+                                                    
+                                                    Storyboard.TargetName="navigation_panel"
+                                                    Storyboard.TargetProperty="Width"
+                                                    BeginTime="0:0:0"
+                                                    From="230" To="65"
+                                                    Duration="0:0:0.2">
+
+
+
+                                                </DoubleAnimation>
+
+
+                                            </Storyboard>
+
+                                        </BeginStoryboard>
+
+
+                                    </EventTrigger>
+
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                                        <BeginStoryboard>
+
+                                            <Storyboard x:Name="ShowStackPanel">
+
+
+                                                <DoubleAnimation
+                                                    
+                                                    Storyboard.TargetName="navigation_panel"
+                                                    Storyboard.TargetProperty="Width"
+                                                    BeginTime="0:0:0"
+                                                    From="65" To="230"
+                                                    Duration="0:0:0.3">
+
+
+
+
+                                                </DoubleAnimation>
+
+
+
+                                            </Storyboard>
+
+
+                                        </BeginStoryboard>
+
+
+                                    </EventTrigger>
+
+
+                                </ToggleButton.Triggers>
+
+
+
+                            </ToggleButton>
+
+                        </Grid>
+
+
+                    </Grid>
+
+
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+
 
     </Grid>
+
+
+
+
 </Window>
