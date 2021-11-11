@@ -100,7 +100,6 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\r
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
@@ -120,3 +119,11 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\C
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.Fody.CopyLocal.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Json.Net.dll
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\Style.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache

@@ -7,11 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\toggle.png" />
+    <None Remove="Assets\closeBtn_default.png" />
+    <None Remove="Assets\closeBtn_MouseOver.png" />
+    <None Remove="Assets\greybackground.jpg" />
+    <None Remove="Assets\greyslidebar.jpg" />
+    <None Remove="Assets\home-icon.png" />
+    <None Remove="Assets\pirosnyil.png" />
+    <None Remove="Assets\tgBtn_default.png" />
+    <None Remove="Assets\tgBtn_MouseOver.png" />
+    <None Remove="Assets\toggle.png" />
+    <None Remove="Assets\zoldnyil.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.13.1" />
+    <PackageReference Include="Fody" Version="6.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Json.Net" Version="1.0.33" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
@@ -19,7 +32,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\toggle.png" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\closeBtn_default.png" />
+    <Resource Include="Assets\closeBtn_MouseOver.png" />
+    <Resource Include="Assets\greybackground.jpg" />
+    <Resource Include="Assets\greyslidebar.jpg" />
+    <Resource Include="Assets\home-icon.png" />
+    <Resource Include="Assets\pirosnyil.png" />
+    <Resource Include="Assets\tgBtn_default.png" />
+    <Resource Include="Assets\tgBtn_MouseOver.png" />
+    <Resource Include="Assets\zoldnyil.png" />
   </ItemGroup>
 
 </Project>

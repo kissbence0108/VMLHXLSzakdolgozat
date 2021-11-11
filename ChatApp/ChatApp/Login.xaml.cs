@@ -85,6 +85,7 @@ namespace ChatApp
                             if (reader.GetString(1) == LoginPassword.Text)
                             {
                                 logined = true;
+                                Application.Current.Properties["username"] = LoginUser.Text;
                                 MainWindow mainWindow = new MainWindow(LoginUser.Text);
                                 mainWindow.ShowDialog();
                             }

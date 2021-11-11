@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2N+E4CgsfrKqIhyZPi3kWPXbxqyrlUzW0QzzAU7VvtFBQw7S9IP6MJRZm34nl6XhnAY63uc8kwPqq7BLfc5cbQ==",
+  "dgSpecHash": "1Mb2FcCcW5H7AYBy+gxCMsaLzCKjSgya+JtxPkWu/gwPLajauPCZx3emBV6X08mqAs0Htl02z0Y7dF5RwJ4Clg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bence\\Documents\\GitHub\\master\\ChatApp\\ChatApp\\ChatApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bence\\.nuget\\packages\\documentformat.openxml\\2.13.1\\documentformat.openxml.2.13.1.nupkg.sha512",
-    "C:\\Users\\Bence\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\Bence\\.nuget\\packages\\fody\\6.6.0\\fody.6.6.0.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

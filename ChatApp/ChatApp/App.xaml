@@ -2,8 +2,20 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ChatApp"
+             xmlns:views="clr-namespace:ChatApp.View"
+             xmlns:viewmodels="clr-namespace:ChatApp.ViewModel"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:MessagesViewModel}">
+                <views:MessagesView/>
+            </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

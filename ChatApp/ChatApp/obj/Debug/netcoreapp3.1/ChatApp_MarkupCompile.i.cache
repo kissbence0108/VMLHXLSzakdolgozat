@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\App.xaml
-2-1376777318
+5-1831694523
 
-61117755508
+15308234796
 1971700729013
-Login.xaml;MainWindow.xaml;
+Login.xaml;MainWindow.xaml;Resources\Style.xaml;View\HomeView.xaml;View\MessagesView.xaml;
 
-False
+True
 

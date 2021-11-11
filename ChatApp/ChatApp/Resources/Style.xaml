@@ -1,0 +1,104 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageBrush x:Key="toggleButtonMouseOver"
+                ImageSource="../Assets/tgBtn_MouseOver.png"/>
+
+    <Style x:Key="fontStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily"
+                Value="Fonts/Raleway-Regular.ttf"/>
+        <Setter Property="VerticalAlignment"
+                Value="Center"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+        <Setter Property="Foreground"
+                Value="White"/>
+        <Setter Property="FontSize"
+                Value="14"/>
+    </Style>
+
+    <Style x:Key="tltpStyle" TargetType="ToolTip">
+        <Setter Property="Placement"
+                Value="Right"/>
+        <Setter Property="Height"
+                Value="30"/>
+        <Setter Property="Width"
+                Value="70"/>
+        <Setter Property="Margin"
+                Value="30,0,0,0"/>
+        <Setter Property="Background"
+                Value="#38382a"/>
+        <Setter Property="Foreground"
+                Value="White"/>
+        <Setter Property="FontFamily"
+                Value="Fonts/Raleway-Regular.ttf"/>
+        <Setter Property="HorizontalOffset"
+                Value="15"/>
+        <Setter Property="VerticalOffset"
+                Value="7.5"/>
+        <Setter Property="HasDropShadow"
+                Value="True"/>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center"/>
+    </Style>
+
+    <ImageBrush x:Key="closeBttn_MousOver" ImageSource="../Assets/closeBtn_MouseOver.png"/>
+    <Style x:Key="closeBttn" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="bttn"
+                            BorderThickness="1"
+                            Background="{TemplateBinding Background}"
+                            SnapsToDevicePixels="True">
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                TargetName="bttn"
+                                Value="{StaticResource closeBttn_MousOver}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="toggleButtonStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            SnapsToDevicePixels="True">
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource toggleButtonMouseOver}"/>
+                            <Setter Property="BorderBrush"
+                                    TargetName="border"
+                                    Value="{StaticResource toggleButtonMouseOver}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{StaticResource toggleButtonMouseOver}"/>
+                            <Setter Property="BorderBrush"
+                                    TargetName="border"
+                                    Value="{StaticResource toggleButtonMouseOver}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+</ResourceDictionary>

@@ -14,7 +14,7 @@
           "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {}
         }
       },
-      "Fody/6.5.1": {
+      "Fody/6.6.0": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
@@ -216,16 +216,16 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
-    "Fody/6.5.1": {
-      "sha512": "DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+    "Fody/6.6.0": {
+      "sha512": "NWWM8KiR9DGiAi47q9px9oI27xYBiM5KXxSnI4R5mz2/rG8LIcXJfw5zDLLH1xOgzqRNJgc8KTPQPoiQCidYUw==",
       "type": "package",
-      "path": "fody/6.5.1",
+      "path": "fody/6.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License.txt",
         "build/Fody.targets",
-        "fody.6.5.1.nupkg.sha512",
+        "fody.6.6.0.nupkg.sha512",
         "fody.nuspec",
         "netclassictask/Fody.dll",
         "netclassictask/FodyCommon.dll",
@@ -654,6 +654,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DocumentFormat.OpenXml >= 2.13.1",
+      "Fody >= 6.6.0",
       "Json.Net >= 1.0.33",
       "Newtonsoft.Json >= 13.0.1",
       "PropertyChanged.Fody >= 3.4.0",
@@ -710,6 +711,12 @@
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[2.13.1, )"
+          },
+          "Fody": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.6.0, )"
           },
           "Json.Net": {
             "target": "Package",
