@@ -32,6 +32,10 @@ namespace ChatApp.Commands
             {
                 viewModel.SelectedViewModel = new MessagesViewModel();
             }
+            //if (parameter.ToString() == "Register")
+            //{
+            //    viewModel.SelectedViewModel = new RegisterViewModel();
+            //}
 
         }
     }

@@ -127,3 +127,5 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\V
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml

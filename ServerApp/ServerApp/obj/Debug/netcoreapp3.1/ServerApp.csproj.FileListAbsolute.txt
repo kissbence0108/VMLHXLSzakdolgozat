@@ -56,3 +56,9 @@ C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\obj\Debug\netcoreapp3
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.genruntimeconfig.cache
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CopyComplete
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

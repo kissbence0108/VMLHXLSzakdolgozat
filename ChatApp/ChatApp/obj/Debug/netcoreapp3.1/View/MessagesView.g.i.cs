@@ -69,7 +69,7 @@ namespace ChatApp.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ChatApp;V1.0.0.0;component/view/messagesview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ChatApp;component/view/messagesview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\MessagesView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -125,6 +126,24 @@ public class AsynchronousSocketListener
             try
             {
                 IDictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+
+                IDictionary<string, string> message = new Dictionary<string, string>
+                {
+                    ["username"] = data["username"],
+                    ["message"] = data["message"],
+                    ["sentAt"] = DateTime.Now.ToString()
+                };
+                
+
+
+
+            // All the data has been read from the
+            // client. Display it on the console.  
+                Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
+                content.Length, content);
+                // Echo the data back to the client.  
+                Send(handler, JsonConvert.SerializeObject(message));
+
             }
             catch (Exception)
             {
@@ -134,14 +153,44 @@ public class AsynchronousSocketListener
             }
 
             
-            // All the data has been read from the
-            // client. Display it on the console.  
-            Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
-                content.Length, content);
-            // Echo the data back to the client.  
-            Send(handler, content);
         }
     }
+
+    //private static void StoreMessage(Dictionary<string, string> message)
+    //{
+
+        
+
+
+
+        
+
+
+
+
+    //    using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30"))
+    //        try
+    //        {
+
+
+    //            using (var cmd = new SqlCommand("INSERT INTO MessagesDatabase (username, message, sentAt) VALUES (@User,@Message,@SentTime)"))
+    //            {
+    //                cmd.Connection = con;
+    //                cmd.Parameters.Add("@Name", message["username"]);
+    //            }
+    //        }
+    //        catch (Exception)
+    //        {
+
+    //            throw;
+    //        }
+
+
+
+
+    //}
+
+
 
     private static void SendError(Socket handler, String error)
     {

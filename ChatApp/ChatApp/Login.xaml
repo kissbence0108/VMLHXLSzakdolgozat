@@ -9,6 +9,7 @@
     <Grid>
         <Button Content="Button" x:Name="Login_BTTN" HorizontalAlignment="Left" Margin="103,350,0,0" VerticalAlignment="Top" Width="75" Click="Login_Click"/>
         <Button Content="Button" x:Name="Register_BTTN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="462,350,0,0" Click="Register_Click"/>
+        <!--<Button Content="Regpage" x:Name="Register_Page" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="282,350,0,0" Click="Register_PageClick"/>-->
         <TextBox x:Name="LoginUser" HorizontalAlignment="Left" Height="23" Margin="103,162,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="LoginPassword" HorizontalAlignment="Left" Height="24" Margin="103,210,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="RegisterUser" HorizontalAlignment="Left" Height="23" Margin="462,148,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="120"/>

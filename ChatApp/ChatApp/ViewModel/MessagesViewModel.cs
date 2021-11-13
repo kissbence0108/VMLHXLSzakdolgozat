@@ -89,15 +89,25 @@ private List<string> _list1 { get; set; }
 
         private void Server_MessageReceived(IAsyncResult ar)
         {
+            
+
             if (ar.IsCompleted)
             {
                 var bytesIn = _client.GetStream().EndRead(ar);
                 if (bytesIn > 0)
+
                 {
+                    
+
+                   
 
                     var tmp = new byte[bytesIn];
                     Array.Copy(_buffer, 0, tmp, 0, bytesIn);
                     var str = Encoding.UTF8.GetString(tmp);
+
+                    IDictionary<string, string> message = JsonConvert.DeserializeObject<Dictionary<string, string>>(str);
+                    
+
 
 
 
@@ -105,10 +115,12 @@ private List<string> _list1 { get; set; }
 
                     Application.Current.Dispatcher.BeginInvoke(new Action(delegate ()
                     {
-                        List1.Add(str);
+                        List1.Add(message["username"] + message["message"] + message["sentAt"]);
                         //listBox1.SelectedIndex = listBox1.Items.Count - 1;
                     }));
                 }
+
+                
 
 
                 Array.Clear(_buffer, 0, _buffer.Length);
