@@ -37,7 +37,7 @@ namespace ChatApp.ViewModel
         }
 
 
-private List<string> _list1 { get; set; }
+        private List<string> _list1 { get; set; }
 
 
         public void InitServer()
@@ -106,9 +106,6 @@ private List<string> _list1 { get; set; }
                     var str = Encoding.UTF8.GetString(tmp);
 
                     IDictionary<string, string> message = JsonConvert.DeserializeObject<Dictionary<string, string>>(str);
-                    
-
-
 
 
 
@@ -116,7 +113,6 @@ private List<string> _list1 { get; set; }
                     Application.Current.Dispatcher.BeginInvoke(new Action(delegate ()
                     {
                         List1.Add(message["username"] + message["message"] + message["sentAt"]);
-                        //listBox1.SelectedIndex = listBox1.Items.Count - 1;
                     }));
                 }
 

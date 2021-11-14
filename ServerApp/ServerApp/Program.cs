@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Net;
 using System.Net.Sockets;
@@ -121,7 +122,7 @@ public class AsynchronousSocketListener
             // Check for end-of-file tag. If it is not there, read
             // more data.  
             content = state.sb.ToString();
-            
+
 
             try
             {
@@ -133,16 +134,22 @@ public class AsynchronousSocketListener
                     ["message"] = data["message"],
                     ["sentAt"] = DateTime.Now.ToString()
                 };
-                
+
+
+                //StoreMessage(new Dictionary<string, string>(message));
 
 
 
-            // All the data has been read from the
-            // client. Display it on the console.  
+                // All the data has been read from the
+                // client. Display it on the console.  
                 Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
                 content.Length, content);
                 // Echo the data back to the client.  
                 Send(handler, JsonConvert.SerializeObject(message));
+
+
+
+
 
             }
             catch (Exception)
@@ -152,43 +159,51 @@ public class AsynchronousSocketListener
                 return;
             }
 
-            
+
         }
     }
 
-    //private static void StoreMessage(Dictionary<string, string> message)
-    //{
 
-        
-
+    private static void StoreMessage(Dictionary<string, string> messagedict)
+    {
 
 
-        
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
+        SqlConnection connection = new SqlConnection(@connectionString);
+        string query = "INSERT INTO MessagesDatabase(UserID, Message, SentTime) VALUES ((select from Users where User.Id), @message, @sentAt);";
+        SqlCommand command = new SqlCommand(query, connection);
+
+        try
+        {
+            connection.Open();
+            command.ExecuteNonQuery();
+
+            //string username = messagedict["username"];
 
 
+            //command.Parameters.Add("@Name", SqlDbType.VarChar);
+            //command.Parameters["@Name"].Value = messagedict["username"];
+        }
+        catch (Exception)
+        {
 
-
-    //    using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30"))
-    //        try
-    //        {
-
-
-    //            using (var cmd = new SqlCommand("INSERT INTO MessagesDatabase (username, message, sentAt) VALUES (@User,@Message,@SentTime)"))
-    //            {
-    //                cmd.Connection = con;
-    //                cmd.Parameters.Add("@Name", message["username"]);
-    //            }
-    //        }
-    //        catch (Exception)
-    //        {
-
-    //            throw;
-    //        }
-
+            Console.WriteLine("errorxd");
+        }
+    }
 
 
 
-    //}
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
