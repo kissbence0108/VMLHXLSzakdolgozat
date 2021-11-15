@@ -94,6 +94,8 @@ public class AsynchronousSocketListener
 
         tcpClientsList.Add(handler);
 
+
+
         // Create the state object.  
         StateObject state = new StateObject();
         state.workSocket = handler;
@@ -136,7 +138,7 @@ public class AsynchronousSocketListener
                 };
 
 
-                //StoreMessage(new Dictionary<string, string>(message));
+                StoreMessage(message);
 
 
 
@@ -154,6 +156,7 @@ public class AsynchronousSocketListener
             }
             catch (Exception)
             {
+                
                 SendError(handler, "Hiba történt");
                 Console.WriteLine("Nem sikerült feldolgozni az üzenetet");
                 return;
@@ -164,30 +167,49 @@ public class AsynchronousSocketListener
     }
 
 
-    private static void StoreMessage(Dictionary<string, string> messagedict)
+    private static void StoreMessage(IDictionary<string, string> messagedict)
     {
 
 
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
         SqlConnection connection = new SqlConnection(@connectionString);
-        string query = "INSERT INTO MessagesDatabase(UserID, Message, SentTime) VALUES ((select from Users where User.Id), @message, @sentAt);";
-        SqlCommand command = new SqlCommand(query, connection);
+        string query2 = "select Id from Users where Username = @username;";
+        SqlCommand command2 = new SqlCommand(query2, connection);
 
         try
-        {
+        {        
+            
+
+            command2.Parameters.Add("@username", SqlDbType.VarChar);
+            command2.Parameters["@username"].Value = messagedict["username"];
+
             connection.Open();
+            int userId = (int)command2.ExecuteScalar();
+            Console.WriteLine(userId);
+
+            string query = "INSERT INTO MessagesDatabase(UserID, Message, SentTime) VALUES (@userId, @message, @sentAt);";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.Add("@userId", SqlDbType.Int);
+            command.Parameters["@userId"].Value = userId;
+
+
+            command.Parameters.Add("@message", SqlDbType.VarChar);
+            command.Parameters["@message"].Value = messagedict["message"];
+
+            command.Parameters.Add("@sentAt", SqlDbType.VarChar);
+            command.Parameters["@sentAt"].Value = messagedict["sentAt"];
             command.ExecuteNonQuery();
 
-            //string username = messagedict["username"];
-
-
-            //command.Parameters.Add("@Name", SqlDbType.VarChar);
-            //command.Parameters["@Name"].Value = messagedict["username"];
         }
         catch (Exception)
         {
-
-            Console.WriteLine("errorxd");
+            throw;
+            //Console.WriteLine("errorxd");
+        }
+        finally
+        {
+            connection.Close();
         }
     }
 
