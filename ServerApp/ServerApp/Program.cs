@@ -93,6 +93,7 @@ public class AsynchronousSocketListener
         Socket handler = listener.EndAccept(ar);
 
         tcpClientsList.Add(handler);
+        SendPreviousMessages(handler);
 
 
 
@@ -140,14 +141,22 @@ public class AsynchronousSocketListener
 
                 StoreMessage(message);
 
+                
+
 
 
                 // All the data has been read from the
                 // client. Display it on the console.  
                 Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
                 content.Length, content);
-                // Echo the data back to the client.  
+
+                
+                // Echo the data back to the client.
+                
                 Send(handler, JsonConvert.SerializeObject(message));
+                
+
+
 
 
 
@@ -156,7 +165,7 @@ public class AsynchronousSocketListener
             }
             catch (Exception)
             {
-                
+                throw;
                 SendError(handler, "Hiba történt");
                 Console.WriteLine("Nem sikerült feldolgozni az üzenetet");
                 return;
@@ -214,18 +223,55 @@ public class AsynchronousSocketListener
     }
 
 
+    private static void SendPreviousMessages(Socket handler)
+    {
+        string connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
+        SqlConnection connection = new SqlConnection(@connectionstring);
+        string query = "SELECT * FROM MessagesDatabase;";
+
+        SqlCommand command = new SqlCommand(query, connection);
+        
+
+        
+        {
+            connection.Open();
+            
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<IDictionary<string, string>> prevMessDict = new List<IDictionary<string, string>>();
+            
+
+
+            while (reader.Read())
+            {
+                prevMessDict.Add(
+                    
+                new Dictionary<string, string>
+                {
+                    ["username"] = reader[1].ToString(),
+                    ["message"] = reader[2].ToString(),
+                    ["sentAt"] = reader[3].ToString()
+                });
+
+
+
+                
+            }
+
+            foreach (var item in prevMessDict)
+            {
+                handler.Send(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(item)));
+            }
+
+
+        }
+         
+
+    }
 
 
 
 
-
-
-
-
-
-
-
-  
 
 
 
