@@ -4,17 +4,24 @@
              xmlns:local="clr-namespace:ChatApp"
              xmlns:views="clr-namespace:ChatApp.View"
              xmlns:viewmodels="clr-namespace:ChatApp.ViewModel"
-             StartupUri="Login.xaml">
+             Startup="Application_Startup">
     <Application.Resources>
+        
         <ResourceDictionary>
+            <FontFamily x:Key="Dosis">pack://application:,,,/Fonts/#Dosis</FontFamily>
             <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
                 <views:HomeView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewmodels:MessagesViewModel}">
                 <views:MessagesView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:GraphsViewModel}">
+                <views:GraphsView/>
+            </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources\Style.xaml"/>
+                <ResourceDictionary Source="Resources\TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Resources\ButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

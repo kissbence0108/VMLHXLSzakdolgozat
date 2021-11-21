@@ -1,134 +1,117 @@
 ﻿using ChatApp.Commands;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Threading;
+using System.Threading;
+using System.Net;
+using System.Collections.ObjectModel;
+using ChatApp.HelperClasses;
+using Newtonsoft.Json;
+using ChatApp.Resources;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Windows.Data;
 
 namespace ChatApp.ViewModel
 {
     public class MessagesViewModel : BaseViewModel
     {
-        TcpClient _client;
-        string username;
-        byte[] _buffer = new byte[4096];
-
         public ICommand SendMessageCommand { get; set; }
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
 
-
-        public string Text1
+        public string MessageToSend
         {
-            get { return _text1; }
-            set { _text1 = value; }
+            get { return messageToSend; }
+            set { messageToSend = value; }
         }
 
-        private string _text1 { get; set; }
+        private string messageToSend { get; set; }
 
+        private object lockObject = new object();
 
-        public List<string> List1
+        public ObservableCollection<string> MessagesCollection
         {
-            get { return _list1; }
-            set { _list1 = value;
-                SendPropertyChanged(nameof(List1));
+            get { return messagesCollection; }
+            set
+            {
+                messagesCollection = value;
+                SendPropertyChanged(nameof(MessagesCollection));
             }
         }
 
+        public int ListIndex
+        {
+            get
+            {
+                return _listIndex;
+            }
+            set
+            {
+                _listIndex = value;
+                SendPropertyChanged(nameof(ListIndex));
+            }
+        }
 
-        private List<string> _list1 { get; set; }
+        private int _listIndex { get; set; }
 
 
-        public void InitServer()
+        private ObservableCollection<string> messagesCollection { get; set; }
+
+
+        public void Init()
         {
 
             SendMessageCommand = new SendMessageCommand(this);
-
-            List1 = new List<string>();
-
-            _client = new TcpClient();
-            username = Application.Current.Properties["username"].ToString();
-
-            
-
-
-
-            _client.Connect("localhost", 54000);
-            _client.GetStream().BeginRead(_buffer,
-                                            0,
-                                            _buffer.Length,
-                                            Server_MessageReceived,
-                                            null);
+            MessagesCollection = new ObservableCollection<string>();
+            GetMessageHistory();
+            //backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            //backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            //backgroundWorker.RunWorkerAsync();
+            //BindingOperations.EnableCollectionSynchronization(MessagesCollection, lockObject);
         }
 
-        
+
+        private void GetMessageHistory()
+        {
+            ClientHelper.SendMessage(MessageHandleEnum.GETMESSAGEHISTORY, "");
+            RefreshMessageList();
+        }
+
+        public void RefreshMessageList()
+        {
+            MessagesCollection.Clear();
+            foreach (Message message in ClientHelper.MessageList)
+            {
+                MessagesCollection.Add("(" + message.SentTime + ") " + message.Username + ": " + message.MessageText);
+            }
+            ListIndex = MessagesCollection.Count - 1;
+        }
+
+        public MessagesViewModel()
+        {
+            Init();
+        }
+
+
 
         public void SendMessage()
         {
-            IDictionary<string, string> data = new Dictionary<string, string>
-            {
-                ["username"] = username,
-                ["message"] = Text1
-            };
-
-
-
-            var msg = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
-
-            _client.GetStream().Write(msg, 0, msg.Length);
-
-
-            Text1 = "";
-            
+            Message message = new Message(Application.Current.Properties["username"].ToString(), MessageToSend, null);
+            string messageJson = JsonConvert.SerializeObject(message);
+            ClientHelper.SendMessage(MessageHandleEnum.SENDMESSAGE, Constants.Separator + messageJson);
+            RefreshMessageList();
 
         }
-
-
-
-
-        private void Server_MessageReceived(IAsyncResult ar)
+        private void backgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            
-
-            if (ar.IsCompleted)
+            while (true)
             {
-                var bytesIn = _client.GetStream().EndRead(ar);
-                if (bytesIn > 0)
-
-                {
-                    
-
-                   
-
-                    var tmp = new byte[bytesIn];
-                    Array.Copy(_buffer, 0, tmp, 0, bytesIn);
-                    var str = Encoding.UTF8.GetString(tmp);
-
-                    IDictionary<string, string> message = JsonConvert.DeserializeObject<Dictionary<string, string>>(str);
-
-
-
-
-                    Application.Current.Dispatcher.BeginInvoke(new Action(delegate ()
-                    {
-                        List1.Add(message["username"] + message["message"] + message["sentAt"]);
-                    }));
-                }
-
-                
-
-
-                Array.Clear(_buffer, 0, _buffer.Length);
-                _client.GetStream().BeginRead(_buffer,
-                                                0,
-                                                _buffer.Length,
-                                                Server_MessageReceived,
-                                                null);
+                //RefreshMessageList();
+                Thread.Sleep(3000);
             }
         }
+
     }
-
-
-   
 }

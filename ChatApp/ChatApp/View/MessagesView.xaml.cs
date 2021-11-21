@@ -24,10 +24,21 @@ namespace ChatApp.View
         {
             InitializeComponent();
             DataContext = new MessagesViewModel();
-            (DataContext as MessagesViewModel).InitServer();
+            //(DataContext as MessagesViewModel).InitServer();
         }
 
+        private void listBox1_DataContextChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var listBox = sender as ListBox;
+            if (listBox == null || listBox.SelectedItem == null || listBox.Items == null) return;
 
+            listBox.Items.MoveCurrentTo(listBox.SelectedItem);
+            listBox.ScrollIntoView(listBox.SelectedItem);
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (DataContext as MessagesViewModel).RefreshMessageList();
+        }
     }
 }

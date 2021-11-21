@@ -62,3 +62,46 @@ C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Bence\Documents\GitHub\master\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.AssemblyReference.cache
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.exe
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.deps.json
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.json
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.dev.json
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.pdb
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfoInputs.cache
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfo.cs
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CoreCompileInputs.cache
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CopyComplete
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.dll
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.pdb
+F:\d bday\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.genruntimeconfig.cache
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.exe
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.deps.json
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.json
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.dev.json
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.pdb
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.AssemblyReference.cache
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfoInputs.cache
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfo.cs
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CoreCompileInputs.cache
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CopyComplete
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.dll
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.pdb
+C:\Users\Bence\Desktop\ghv\ServerApp\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.genruntimeconfig.cache

@@ -24,8 +24,6 @@ namespace ChatApp.Commands
         public void Execute(object parameter)
         {
             viewModel.SendMessage();
-           
-
         }
     }
 }

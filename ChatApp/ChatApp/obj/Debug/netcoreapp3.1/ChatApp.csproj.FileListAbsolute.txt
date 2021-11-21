@@ -100,12 +100,10 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\r
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.lref
-C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Login.baml
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.g.resources
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -129,3 +127,99 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\A
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.exe
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.deps.json
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.json
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.dev.json
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.pdb
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Json.Net.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Login.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.cache
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.lref
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Login.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.g.resources
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfoInputs.cache
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfo.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CoreCompileInputs.cache
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.Fody.CopyLocal.cache
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CopyComplete
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.dll
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.pdb
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.genruntimeconfig.cache
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\Style.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
+C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.exe
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.deps.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.dev.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.pdb
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Json.Net.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\Style.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.lref
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.g.resources
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfoInputs.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfo.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CoreCompileInputs.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.Fody.CopyLocal.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CopyComplete
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.pdb
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.genruntimeconfig.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csprojAssemblyReference.cache
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.g.cs
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.baml

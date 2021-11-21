@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using ServerApp.DatabaseObjects;
+using ServerApp.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +14,7 @@ using System.Threading;
 public class StateObject
 {
     // Size of receive buffer.  
-    public const int BufferSize = 1024;
+    public const int BufferSize = 1048576; //one MB of data
 
     // Receive buffer.  
     public byte[] buffer = new byte[BufferSize];
@@ -26,6 +28,9 @@ public class StateObject
 
 public class AsynchronousSocketListener
 {
+    private static ManualResetEvent sendDone =
+    new ManualResetEvent(false);
+
     private static List<Socket> tcpClientsList = new List<Socket>();
 
     // Thread signal.  
@@ -93,7 +98,7 @@ public class AsynchronousSocketListener
         Socket handler = listener.EndAccept(ar);
 
         tcpClientsList.Add(handler);
-        SendPreviousMessages(handler);
+        //SendPreviousMessages(handler);
 
 
 
@@ -114,160 +119,55 @@ public class AsynchronousSocketListener
         Socket handler = state.workSocket;
 
         // Read data from the client socket.
-        int bytesRead = handler.EndReceive(ar);
+        int bytesRead = 0;
+        try
+        {
+            bytesRead = handler.EndReceive(ar);
+        }
+        catch(Exception e)
+        {
+        }
 
         if (bytesRead > 0)
         {
             // There  might be more data, so store the data received so far.  
-            state.sb.Append(Encoding.UTF8.GetString(
+            state.sb.Append(Encoding.ASCII.GetString(
                 state.buffer, 0, bytesRead));
 
             // Check for end-of-file tag. If it is not there, read
             // more data.  
             content = state.sb.ToString();
-
-
-            try
+            if (content.EndsWith(MessageHandleHelper.EndOfTransmissionSeparator))
             {
-                IDictionary<string, string> data = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
-
-                IDictionary<string, string> message = new Dictionary<string, string>
-                {
-                    ["username"] = data["username"],
-                    ["message"] = data["message"],
-                    ["sentAt"] = DateTime.Now.ToString()
-                };
-
-
-                StoreMessage(message);
-
-                
-
-
-
                 // All the data has been read from the
-                // client. Display it on the console.  
+                // client. Handle the received message
+                string response = MessageHandleHelper.HandleMessage(content);
                 Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
-                content.Length, content);
-
-                
-                // Echo the data back to the client.
-                
-                Send(handler, JsonConvert.SerializeObject(message));
-                
-
-
-
-
-
-
-
-            }
-            catch (Exception)
-            {
-                throw;
-                SendError(handler, "Hiba történt");
-                Console.WriteLine("Nem sikerült feldolgozni az üzenetet");
-                return;
-            }
-
-
-        }
-    }
-
-
-    private static void StoreMessage(IDictionary<string, string> messagedict)
-    {
-
-
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
-        SqlConnection connection = new SqlConnection(@connectionString);
-        string query2 = "select Id from Users where Username = @username;";
-        SqlCommand command2 = new SqlCommand(query2, connection);
-
-        try
-        {        
-            
-
-            command2.Parameters.Add("@username", SqlDbType.VarChar);
-            command2.Parameters["@username"].Value = messagedict["username"];
-
-            connection.Open();
-            int userId = (int)command2.ExecuteScalar();
-            Console.WriteLine(userId);
-
-            string query = "INSERT INTO MessagesDatabase(UserID, Message, SentTime) VALUES (@userId, @message, @sentAt);";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.Add("@userId", SqlDbType.Int);
-            command.Parameters["@userId"].Value = userId;
-
-
-            command.Parameters.Add("@message", SqlDbType.VarChar);
-            command.Parameters["@message"].Value = messagedict["message"];
-
-            command.Parameters.Add("@sentAt", SqlDbType.VarChar);
-            command.Parameters["@sentAt"].Value = messagedict["sentAt"];
-            command.ExecuteNonQuery();
-
-        }
-        catch (Exception)
-        {
-            throw;
-            //Console.WriteLine("errorxd");
-        }
-        finally
-        {
-            connection.Close();
-        }
-    }
-
-
-    private static void SendPreviousMessages(Socket handler)
-    {
-        string connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
-        SqlConnection connection = new SqlConnection(@connectionstring);
-        string query = "SELECT * FROM MessagesDatabase;";
-
-        SqlCommand command = new SqlCommand(query, connection);
-        
-
-        
-        {
-            connection.Open();
-            
-            SqlDataReader reader = command.ExecuteReader();
-
-            List<IDictionary<string, string>> prevMessDict = new List<IDictionary<string, string>>();
-            
-
-
-            while (reader.Read())
-            {
-                prevMessDict.Add(
-                    
-                new Dictionary<string, string>
+                    content.Length, content);
+                // We send the response back to the client.  
+                if (content.StartsWith("SENDMESSAGE"))
                 {
-                    ["username"] = reader[1].ToString(),
-                    ["message"] = reader[2].ToString(),
-                    ["sentAt"] = reader[3].ToString()
-                });
-
-
-
-                
+                    foreach(var client in tcpClientsList)
+                    {
+                        Send(client, response);
+                    }
+                }
+                else
+                {
+                    Send(handler, response);
+                }
             }
-
-            foreach (var item in prevMessDict)
+            else
             {
-                handler.Send(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(item)));
+                // Not all data received. Get more.  
+                handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
+                new AsyncCallback(ReadCallback), state);
             }
-
-
         }
-         
-
     }
+
+   
+
 
 
 
@@ -280,10 +180,8 @@ public class AsynchronousSocketListener
         IDictionary<string, string> data = new Dictionary<string, string>
         {
             ["error"] = error,
-            
-        };
 
-        
+        };
 
         byte[] byteData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
         handler.BeginSend(byteData, 0, byteData.Length, 0,
@@ -293,15 +191,13 @@ public class AsynchronousSocketListener
     private static void Send(Socket handler, String data)
     {
         // Convert the string data to byte data using ASCII encoding.  
-        byte[] byteData = Encoding.UTF8.GetBytes(data);
+        byte[] byteData = Encoding.UTF8.GetBytes(data+MessageHandleHelper.EndOfTransmissionSeparator);
 
-        foreach (Socket client in tcpClientsList)
-        {
 
-            // Begin sending the data to the remote device.  
-            client.BeginSend(byteData, 0, byteData.Length, 0,
-            new AsyncCallback(SendCallback), client);
-        }
+        // Begin sending the data to the remote device.  
+        handler.BeginSend(byteData, 0, byteData.Length, 0,
+        new AsyncCallback(SendCallback), handler);
+        sendDone.WaitOne();
     }
 
     private static void SendCallback(IAsyncResult ar)
@@ -315,6 +211,7 @@ public class AsynchronousSocketListener
             int bytesSent = handler.EndSend(ar);
             Console.WriteLine("Sent {0} bytes to client.", bytesSent);
 
+            sendDone.Set();
             StateObject state = new StateObject();
             state.workSocket = handler;
             handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,

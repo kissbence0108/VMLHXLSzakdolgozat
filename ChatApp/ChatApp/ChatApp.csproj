@@ -12,11 +12,19 @@
     <None Remove="Assets\greybackground.jpg" />
     <None Remove="Assets\greyslidebar.jpg" />
     <None Remove="Assets\home-icon.png" />
+    <None Remove="Assets\icons8-close-window-96.png" />
+    <None Remove="Assets\icons8-house-96.png" />
+    <None Remove="Assets\icons8-messages-96.png" />
+    <None Remove="Assets\icons8-pie-chart-96.png" />
+    <None Remove="Assets\icons8-toggle-off-100.png" />
+    <None Remove="Assets\icons8-toggle-on-100.png" />
     <None Remove="Assets\pirosnyil.png" />
     <None Remove="Assets\tgBtn_default.png" />
     <None Remove="Assets\tgBtn_MouseOver.png" />
     <None Remove="Assets\toggle.png" />
     <None Remove="Assets\zoldnyil.png" />
+    <None Remove="Fonts\antipasto.ttf" />
+    <None Remove="Fonts\raleway.semibold.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,10 +49,18 @@
     <Resource Include="Assets\greybackground.jpg" />
     <Resource Include="Assets\greyslidebar.jpg" />
     <Resource Include="Assets\home-icon.png" />
+    <Resource Include="Assets\icons8-close-window-96.png" />
+    <Resource Include="Assets\icons8-house-96.png" />
+    <Resource Include="Assets\icons8-messages-96.png" />
+    <Resource Include="Assets\icons8-pie-chart-96.png" />
+    <Resource Include="Assets\icons8-toggle-off-100.png" />
+    <Resource Include="Assets\icons8-toggle-on-100.png" />
     <Resource Include="Assets\pirosnyil.png" />
     <Resource Include="Assets\tgBtn_default.png" />
     <Resource Include="Assets\tgBtn_MouseOver.png" />
     <Resource Include="Assets\zoldnyil.png" />
+    <Resource Include="Fonts\antipasto.ttf" />
+    <Resource Include="Fonts\raleway.semibold.ttf" />
   </ItemGroup>
 
 </Project>

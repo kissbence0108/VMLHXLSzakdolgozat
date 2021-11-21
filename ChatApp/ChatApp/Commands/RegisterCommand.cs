@@ -1,22 +1,36 @@
-﻿
+﻿using ChatApp.Resources;
+using ChatApp.ViewModel;
 using System;
-using System.Data.SqlClient;
-using System.Windows;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
 
-namespace ChatApp
+namespace ChatApp.Commands
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class Login : Window
+    public class RegisterCommand : ICommand
     {
-        public Login()
+
+        public event EventHandler CanExecuteChanged;
+
+        private RegisterViewModel viewModel;
+        public RegisterCommand(RegisterViewModel viewModel)
         {
-            InitializeComponent();
+            this.viewModel = viewModel;
+        }
+        public bool CanExecute(object parameter)
+        {
+            return true;
         }
 
-        private void Register_Click(object sender, RoutedEventArgs e)
+        public void Execute(object parameter)
         {
+            if(viewModel.Password == viewModel.PasswordConfirm)
+            {
+                HelperClasses.ClientHelper.SendMessage(HelperClasses.MessageHandleEnum.REGISTER, Constants.Separator + viewModel.Username + Constants.Separator + viewModel.Password);
+            }
+            
+            /*
+             
             var Username = RegisterUser;
             string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
 
@@ -32,6 +46,11 @@ namespace ChatApp
                         {
                             if (RegisterPass.Text == RegisterPassC.Text)
                             {
+                                //myPersonalGUID = new GUID();
+                                //send to server => "GUID-LOGIN-username-password";
+                                //server send => "GUID-LOGIN-TRUE"
+                                //nugget.encrypt(password)
+
                                 string cmdString = "INSERT INTO Users (Username,Password) VALUES ('" + RegisterUser.Text + "', '" + RegisterPass.Text + "')";
                                 using (SqlConnection connect = new SqlConnection(connString))
                                 {
@@ -66,43 +85,7 @@ namespace ChatApp
                 }
             }
 
-        }
-
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
-            var logined = false;
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Username, Password FROM Users where Username='" + LoginUser.Text + "' ", conn);
-                try
-                {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            if (reader.GetString(1) == LoginPassword.Text)
-                            {
-                                logined = true;
-                                Application.Current.Properties["username"] = LoginUser.Text;
-                                MainWindow mainWindow = new MainWindow(LoginUser.Text);
-                                mainWindow.ShowDialog();
-                            }
-                            else
-                            {
-                                logined = false;
-                            }
-                        }
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
+            */
         }
     }
 }

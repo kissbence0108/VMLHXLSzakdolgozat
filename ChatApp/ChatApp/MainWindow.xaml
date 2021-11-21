@@ -6,70 +6,92 @@
         xmlns:local="clr-namespace:ChatApp"
         xmlns:asd="clr-namespace:ChatApp.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        Background="Transparent">
 
 
 
-    <Grid>
-        
+<Grid>
+
+        <Grid >
+
+            <Grid Background="Gray">
+                <Grid x:Name="bckgrnd">
+                    <Grid.Background>
+                        <ImageBrush x:Name="bckgrndimg"
+                                ImageSource="Assets/greybackground.jpg"
+                                Stretch="Fill"/>
+                    </Grid.Background>
+                </Grid>
 
 
-        
-        
-        <Grid Background="Gray">
-            
+                <Grid>
 
-            <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="5"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
 
-                <ContentControl Content="{Binding SelectedViewModel}"
+                    <ContentControl Content="{Binding SelectedViewModel}"
                                 Grid.Column="0"
                                 Grid.Row="2"
                                 Grid.ColumnSpan="5"
                                 Margin="70,0,0,0"/>
-                
 
-                
+                    <Button x:Name="CloseBtn"
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        Height="40"
+                        Width="40"
+                        BorderThickness="0"
+                        Style="{StaticResource closeBttn}" Click="CloseBtn_Click"  Margin="10">
 
-            </Grid>
-            <Grid x:Name="navigationPanel"
+                        <Button.Background>
+
+                            <ImageBrush ImageSource="Assets/icons8-close-window-96.png"/>
+
+                        </Button.Background>
+
+                    </Button>
+
+
+
+                </Grid>
+                <Grid x:Name="navigationPanel"
                   HorizontalAlignment="Left"
                   Width="60">
-                
-                <Grid.Background>
-                    <ImageBrush x:Name="slidebarbckgrnd"
+
+                    <Grid.Background>
+                        <ImageBrush x:Name="slidebarbckgrnd"
                                 ImageSource="Assets/greyslidebar.jpg"
                                 Stretch="None"/>
-                </Grid.Background>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="11*"/>
-                    <ColumnDefinition Width="49*"/>
-                </Grid.ColumnDefinitions>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="49*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
-                    <Grid Height="120">
-                        <TextBlock Grid.Row="1"
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+                        <Grid Height="120">
+                            <TextBlock Grid.Row="1"
                                    Grid.Column="0"
-                                   Margin="65,20,0,0"
+                                   Margin="65,-20,0,0"
                                    Text="MENU"
                                    Foreground="White"
                                    FontSize="20"
@@ -79,178 +101,188 @@
 
 
 
-                            <TextBlock.Effect>
-                                <DropShadowEffect BlurRadius="10"
+                                <TextBlock.Effect>
+                                    <DropShadowEffect BlurRadius="10"
                                                          ShadowDepth="1"
                                                          Direction="-90"
                                                          Color="White"/>
-                            </TextBlock.Effect>
-                        </TextBlock>
-                        <ToggleButton x:Name="tgglBttn"
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <ToggleButton x:Name="tgglBttn"
                                       Grid.Column="0"
                                       VerticalAlignment="Center"
                                       HorizontalAlignment="Left"
-                                      Margin="18,20,0,0"
+                                      Margin="18,-20,0,0"
                                       Height="30"
                                       Width="30"
                                       BorderThickness="0"
+                                      Style="{StaticResource toggleButtonStyle}"
                                       Unchecked="tgglBttn_Unchecked"
                                       Checked="tgglBttn_Unchecked">
 
 
 
 
-                            <ToggleButton.Background>
-                                <ImageBrush ImageSource="Assets/tgBtn_default.png"
+                                <ToggleButton.Background>
+                                    <ImageBrush ImageSource="Assets/tgBtn_default.png"
                                         Stretch="Fill"/>
-                            </ToggleButton.Background>
+                                </ToggleButton.Background>
 
-                            <ToggleButton.Triggers>
-                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="HideStackPanel">
-                                            <DoubleAnimation
+                                <ToggleButton.Triggers>
+                                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="HideStackPanel">
+                                                <DoubleAnimation
                                                 Storyboard.TargetName="navigationPanel"
                                                 Storyboard.TargetProperty="Width"
                                                 BeginTime="0:0:0"
                                                 From="150" To="60"
                                                 Duration="0:0:0.2">
 
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                                <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="ShowStackPanel">
-                                            <DoubleAnimation
+                                                </DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="ShowStackPanel">
+                                                <DoubleAnimation
                                                 Storyboard.TargetName="navigationPanel"
                                                 Storyboard.TargetProperty="Width"
                                                 BeginTime="0:0:0"
                                                 From="60" To="150"
                                                 Duration="0:0:0.2">
 
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </ToggleButton.Triggers>
+                                                </DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ToggleButton.Triggers>
 
-                        </ToggleButton>
+                            </ToggleButton>
 
-                    </Grid>
+                        </Grid>
 
-                    <ListView x:Name="listView"
+                        <ListView x:Name="listView"
                               Background="Transparent"
                               BorderBrush="Transparent"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
-                        <ListViewItem HorizontalAlignment="Left"
+                            <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
 
-                            <StackPanel Orientation="Horizontal"
+                                <StackPanel Orientation="Horizontal"
                                         Width="230">
 
-                                <Image Source="Assets/home-icon.png"
+                                    <Image Source="Assets/icons8-house-96.png"
                                                Stretch="Fill"
-                                               Margin="9,0,0,0">
+                                               Margin="5,0,0,0" Height="42" Width="42" VerticalAlignment="Stretch">
 
-                                    <Image.InputBindings>
-                                        <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
-                                    </Image.InputBindings>
+                                        <Image.InputBindings>
+                                            <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
+                                        </Image.InputBindings>
 
-                                </Image>
+                                    </Image>
 
-                                <TextBlock Text="Home"
-                                           Margin="29,0,0,0"/>
+                                    <TextBlock Text="Home"
+                                           Margin="29,0,0,0"
+                                           FontFamily="Fonts/raleway.semibold.ttf"
+                                           Style="{StaticResource fontStyle}"/>
+
+
+                                </StackPanel>
+
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tooltip_home"
+                                         Content="Home"
+                                         Style="{StaticResource tltpStyle}"/>
+
+                                </ListViewItem.ToolTip>
+
+
+                            </ListViewItem>
+
+
+                            <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
+
+                                <StackPanel Orientation="Horizontal"
+                                        Width="230">
+
+                                    <Image Source="Assets/icons8-messages-96.png"
+                                               Stretch="Fill"
+                                               Margin="5,0,0,0" Height="42" Width="42">
+
+                                        <Image.InputBindings>
+                                            <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Messages"/>
+                                        </Image.InputBindings>
+
+                                    </Image>
+
+                                    <TextBlock Text="Messages"
+                                           Margin="25,0,0,0"
+                                           FontFamily="Fonts/raleway.semibold.ttf"
+                                           Style="{StaticResource fontStyle}"/>
+
+                                </StackPanel>
+
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tooltip_messages"
+                                         Content="Messages"
+                                         Style="{StaticResource tltpStyle}"/>
+
+                                </ListViewItem.ToolTip>
+
+
+                            </ListViewItem>
+
+                            <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
+
+                                <StackPanel Orientation="Horizontal"
+                                        Width="230">
+
+                                    <Image Source="Assets/icons8-pie-chart-96.png"
+                                               Stretch="Fill"
+                                               Margin="5,0,0,0" Height="42" Width="42">
+
+                                        <Image.InputBindings>
+                                            <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Graphs"/>
+                                        </Image.InputBindings>
+
+                                    </Image>
+
+                                    <TextBlock Text="Graphs"
+                                           Margin="25,0,0,0"
                                            
+                                           Style="{StaticResource fontStyle}"/>
 
-                            </StackPanel>
+                                </StackPanel>
 
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_home"
-                                         Content="Home"/>
+                                <ListViewItem.ToolTip>
+                                    <ToolTip x:Name="tooltip_graphs"
+                                         Content="Graphs"
+                                         Style="{StaticResource tltpStyle}"/>
 
-                            </ListViewItem.ToolTip>
-
-
-                        </ListViewItem>
-
-
-                        <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
-
-                            <StackPanel Orientation="Horizontal"
-                                        Width="230">
-
-                                <Image Source="Assets/zoldnyil.png"
-                                               Stretch="Fill"
-                                               Margin="5,0,0,0">
-
-                                    <Image.InputBindings>
-                                        <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Messages"/>
-                                    </Image.InputBindings>
-
-                                </Image>
-
-                                <TextBlock Text="Messages"
-                                           Margin="25,0,0,0"/>
-
-                            </StackPanel>
-
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_income"
-                                         Content="Messages"/>
-
-                            </ListViewItem.ToolTip>
+                                </ListViewItem.ToolTip>
 
 
-                        </ListViewItem>
+                            </ListViewItem>
 
-                        <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
-
-                            <StackPanel Orientation="Horizontal"
-                                        Width="230">
-
-                                <Image Source="Assets/pirosnyil.png"
-                                               Stretch="Fill"
-                                               Margin="5,0,0,0">
-
-                                    <Image.InputBindings>
-                                        <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Outcomes"/>
-                                    </Image.InputBindings>
-
-                                </Image>
-
-                                <TextBlock Text="Outcomes"
-                                           Margin="25,0,0,0"/>
-
-                            </StackPanel>
-
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_outcome"
-                                         Content="Outcomes"/>
-
-                            </ListViewItem.ToolTip>
-
-
-                        </ListViewItem>
-
-                    </ListView>
+                        </ListView>
 
 
 
-                </StackPanel>
-                
+                    </StackPanel>
+
+                </Grid>
             </Grid>
-        </Grid>
-    
 
+
+
+        </Grid>
 
     </Grid>
-
-
-
+        
 
 </Window>

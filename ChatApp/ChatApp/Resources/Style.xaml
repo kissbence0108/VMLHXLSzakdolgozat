@@ -5,7 +5,7 @@
 
     <Style x:Key="fontStyle" TargetType="{x:Type TextBlock}">
         <Setter Property="FontFamily"
-                Value="Fonts/Raleway-Regular.ttf"/>
+                Value="Fonts/#Dosis"/>
         <Setter Property="VerticalAlignment"
                 Value="Center"/>
         <Setter Property="HorizontalAlignment"
@@ -41,7 +41,7 @@
                 Value="Center"/>
     </Style>
 
-    <ImageBrush x:Key="closeBttn_MousOver" ImageSource="../Assets/closeBtn_MouseOver.png"/>
+    <ImageBrush x:Key="closeBttn_MousOver" ImageSource="../Assets/icons8-close-window-96.png"/>
     <Style x:Key="closeBttn" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>

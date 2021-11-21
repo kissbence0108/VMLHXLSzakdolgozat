@@ -50,16 +50,15 @@ namespace ChatApp
 
         }
 
-        private void closeBttn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
         private void tgglBttn_Unchecked(object sender, RoutedEventArgs e)
         {
 
         }
 
-
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
