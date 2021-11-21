@@ -35,5 +35,10 @@ namespace ChatApp.View
             RegisterView rv = new RegisterView();
             rv.ShowDialog();
         }
+
+        private void exitBttn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -8,9 +8,25 @@ namespace ChatApp.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        
 
         private BaseViewModel _selectedViewModel = new ViewModel.HomeViewModel();
+
+        private bool darkMode;
+        public bool IsTrue { get; set; }
+        public bool DarkMode
+        {
+            get { return darkMode; }
+            set
+            {
+                darkMode = value;
+            }
+        }
+
+        public MainViewModel(bool isTrue)
+        {
+            IsTrue = isTrue;
+            DarkMode = false;
+        }
 
         public MainViewModel()
         {

@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Assets\closeBtn_default.png" />
     <None Remove="Assets\closeBtn_MouseOver.png" />
+    <None Remove="Assets\daynight.png" />
     <None Remove="Assets\greybackground.jpg" />
     <None Remove="Assets\greyslidebar.jpg" />
     <None Remove="Assets\home-icon.png" />
@@ -46,6 +47,7 @@
   <ItemGroup>
     <Resource Include="Assets\closeBtn_default.png" />
     <Resource Include="Assets\closeBtn_MouseOver.png" />
+    <Resource Include="Assets\daynight.png" />
     <Resource Include="Assets\greybackground.jpg" />
     <Resource Include="Assets\greyslidebar.jpg" />
     <Resource Include="Assets\home-icon.png" />

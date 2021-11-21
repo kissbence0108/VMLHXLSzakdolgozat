@@ -5,17 +5,209 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ChatApp.View"
              mc:Ignorable="d" 
-        Background="Black"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="ez a reg"
-                   FontSize="72"
-                   Foreground="White"
-                   FontWeight="Bold"
-                   HorizontalAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Height="15" Margin="307,157,0,0" Text="{Binding Username,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="307,200,0,0" Text="{Binding Password,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="307,250,0,0" Text="{Binding ConfirmPassword,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="314,301,0,0" VerticalAlignment="Top" Width="106" Height="31" Command="{Binding RegisterCommand}"/>
-    </Grid>
+             Title="Register" Height="450" Width="600"
+             Background="Transparent"
+             AllowsTransparency="True"
+             WindowStyle="None"
+             MouseDown="Window_MouseDown">
+
+
+
+    <Border Background="#363a40"
+            CornerRadius="20">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="REGISTER&#x0a;VMLHXL"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Grid.Column="0"
+                     Grid.Row="0"
+                     Grid.ColumnSpan="2"
+                     Grid.RowSpan="2"
+                     Margin="12,0,0,0"
+                     FontFamily="Fonts/#Dosis"
+                     Style="{DynamicResource fontStyle}"/>
+
+
+
+
+            <TextBlock Text="Username"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Grid.Column="2"
+                     Grid.Row="1"
+                     FontFamily="Fonts/#Dosis"
+                     Style="{StaticResource fontStyle}"/>
+
+
+            <StackPanel Grid.Row="2"
+                        Grid.Column="2">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+
+                    <TextBox x:Name="RegisterUser"
+                 Text="{Binding Username, Mode=TwoWay}"
+                 FontSize="20"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Foreground="White"
+                 Grid.Column="2"
+                 Grid.Row="2"
+                 Background="#363a40"
+                 
+                 BorderThickness="0"
+                 Width="250"
+                 HorizontalContentAlignment="Center"
+                 Opacity="0.5"
+                 Height="25"
+                             />
+
+                </StackPanel>
+
+                <Border Width="100"
+                 Height="2"
+                 Background="White"
+                    Opacity="0.5"/>
+            </StackPanel>
+
+
+            <TextBlock Text="Password"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                       Grid.Column="2"
+                       Grid.Row="3"
+                       FontFamily="Fonts/#Dosis"
+                     Style="{StaticResource fontStyle}"/>
+
+
+            <StackPanel Grid.Row="4"
+                        Grid.Column="2">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+
+                    <PasswordBox x:Name="RegisterPasswordBox"
+
+                    FontSize="20"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Foreground="White"
+                 Grid.Column="2"
+                 Grid.Row="4"
+                 Background="#363a40"
+                 BorderThickness="0"
+                 Width="250"
+                 HorizontalContentAlignment="Center"
+                 Opacity="0.5"
+                 Height="25"/>
+
+                </StackPanel>
+
+                <Border Width="100"
+                 Height="2"
+                 Background="White"
+                    Opacity="0.5"/>
+            </StackPanel>
+
+            <TextBlock Text="Confirm Password"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Grid.Column="2"
+                     Grid.Row="5"
+                       
+                     FontFamily="Fonts/#Dosis"
+                     Style="{StaticResource fontStyle}"/>
+
+
+            <StackPanel Grid.Row="6"
+                        Grid.Column="2">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+
+                    <PasswordBox x:Name="RegisterPasswordConfirmBox"
+
+                    FontSize="20"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Foreground="White"
+                 Grid.Column="2"
+                 Grid.Row="6"
+                 Background="#363a40"
+                 BorderThickness="0"
+                 Width="250"
+                 HorizontalContentAlignment="Center"
+                 Opacity="0.5"
+                 Height="25"/>
+
+                </StackPanel>
+
+                <Border Width="100"
+                 Height="2"
+                 Background="White"
+                    Opacity="0.5"/>
+            </StackPanel>
+
+
+            <TextBlock Text="Register Here"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                       Grid.Column="2"
+                       Grid.Row="7"
+                       FontFamily="Fonts/#Dosis"
+                     Style="{StaticResource fontStyle}"/>
+
+
+            <Button Content="Register" 
+                    x:Name="RegisterBttn" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Grid.Column="2"
+                    Grid.Row="8"
+                    Width="120"
+                    Height="40"
+                    FontFamily="Fonts/#Dosis"
+                    Command="{Binding RegisterCommand}"/>
+
+            <Button Content="Exit" 
+                    x:Name="exitBttn" 
+                    VerticalAlignment="Center"
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    Width="50"
+                    Height="20"
+                    Margin="20,0,0,0"
+                    Click="exitBttn_Click"/>
+
+
+
+
+
+            <!--<TextBox HorizontalAlignment="Left" Margin="307,200,0,0" Text="{Binding Password,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>-->
+            <!--<TextBox HorizontalAlignment="Left" Margin="307,250,0,0" Text="{Binding ConfirmPassword,Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>-->
+            <Button Content="Button" HorizontalAlignment="Left" Margin="314,301,0,0" VerticalAlignment="Top" Width="106" Height="31" Command="{Binding RegisterCommand}"/>
+        </Grid>
+    </Border>
 </Window>

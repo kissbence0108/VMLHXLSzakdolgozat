@@ -166,13 +166,6 @@ public class AsynchronousSocketListener
         }
     }
 
-   
-
-
-
-
-
-
 
 
     private static void SendError(Socket handler, String error)

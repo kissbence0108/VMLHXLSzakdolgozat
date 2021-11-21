@@ -24,6 +24,9 @@ namespace ChatApp
     public partial class MainWindow : Window
     {
 
+        private MainViewModel _MainViewModel;
+
+
         TcpClient _client;
         string username;
 
@@ -32,18 +35,15 @@ namespace ChatApp
         public MainWindow(string user)
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            _MainViewModel = new MainViewModel();
+            DataContext = _MainViewModel;
             username = user;
             _client = new TcpClient();
-            
+
+
         }
 
 
-       
-
-
-
- 
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -59,6 +59,11 @@ namespace ChatApp
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void DayNightbttn_Click(object sender, RoutedEventArgs e)
+        {
+            _MainViewModel.DarkMode = !_MainViewModel.DarkMode;
         }
     }
 }

@@ -7,23 +7,18 @@
         xmlns:asd="clr-namespace:ChatApp.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStyle="None"
-        Background="Transparent">
+        WindowStyle="None">
 
-
+    <Window.Resources>
+        <local:BoolToBrush x:Key="BoolToBrushConverter"/>
+    </Window.Resources>
 
 <Grid>
 
         <Grid >
 
-            <Grid Background="Gray">
-                <Grid x:Name="bckgrnd">
-                    <Grid.Background>
-                        <ImageBrush x:Name="bckgrndimg"
-                                ImageSource="Assets/greybackground.jpg"
-                                Stretch="Fill"/>
-                    </Grid.Background>
-                </Grid>
+            <Grid Background="{Binding DarkMode, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BoolToBrushConverter}}">
+                
 
 
                 <Grid>
@@ -60,6 +55,22 @@
                         <Button.Background>
 
                             <ImageBrush ImageSource="Assets/icons8-close-window-96.png"/>
+
+                        </Button.Background>
+
+                    </Button>
+
+                    <Button x:Name="DayNightbttn"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Height="40"
+                        Width="40"
+                        BorderThickness="0"
+                        Margin="10" Click="DayNightbttn_Click">
+
+                        <Button.Background>
+
+                            <ImageBrush ImageSource="Assets/daynight.png"/>
 
                         </Button.Background>
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600"
+        Title="Login" Height="450" Width="600"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
@@ -65,7 +65,7 @@
 
 
 
-            <TextBlock Text="LOGIN&#x0a;Welcome to my Chat App&#x0a;Made By Bence Kiss"
+            <TextBlock Text="LOGIN&#x0a;VMLHXL"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
                      Grid.Column="0"
@@ -84,15 +84,7 @@
                      FontFamily="Fonts/#Dosis"
                      Style="{StaticResource fontStyle}"/>
 
-            <!--<TextBox x:Name="LoginUser" 
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Height="24" 
-                     Grid.Column="2"
-                     Grid.Row="2"
-                     Text="admin"
-                     TextWrapping="Wrap" 
-                     Width="120"/>-->
+
             <StackPanel Grid.Row="2"
                         Grid.Column="2">
                 <StackPanel Orientation="Horizontal"
@@ -126,10 +118,6 @@
 
 
 
-
-
-
-
             <TextBlock Text="Password"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
@@ -138,14 +126,7 @@
                        FontFamily="Fonts/#Dosis"
                      Style="{StaticResource fontStyle}"/>
 
-            <!--<PasswordBox x:Name="LoginPassword" 
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
-                         Height="24" 
-                         Grid.Column="2"
-                         Grid.Row="4"
-                         Width="120"
-                         Password="admin"/>-->
+
 
             <StackPanel Grid.Row="4"
                         Grid.Column="2">
@@ -232,9 +213,22 @@
                     Width="120"
                     Height="40"
                     Click="Register_Page_Click"/>
-    
-    
-    
+
+
+            <Button Content="Exit" 
+                    x:Name="exitBttn" 
+                    VerticalAlignment="Center"
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    Width="50"
+                    Height="20"
+                    Margin="20,0,0,0"
+                    Click="exitBttn_Click"/>
+
+
+
+
+
             <!--<Button Content="Button" x:Name="Register_BTTN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="652,355,0,0" Click="Register_Click"/>-->
         <TextBox x:Name="RegisterUser" HorizontalAlignment="Left" Height="23" Margin="652,153,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="RegisterPass" HorizontalAlignment="Left" Height="23" Margin="652,201,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
