@@ -56,9 +56,21 @@
               "target": "Package",
               "version": "[6.6.0, )"
             },
+            "Gu.Localization": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            },
             "Json.Net": {
               "target": "Package",
               "version": "[1.0.33, )"
+            },
+            "LiveCharts": {
+              "target": "Package",
+              "version": "[0.9.7, )"
+            },
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -68,9 +80,17 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
+            },
+            "WPFLocalizeExtension": {
+              "target": "Package",
+              "version": "[3.9.1, )"
             }
           },
           "imports": [

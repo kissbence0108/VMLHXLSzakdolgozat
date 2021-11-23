@@ -9,6 +9,7 @@ namespace ServerApp.HelperClasses
         LOGIN = 0,
         REGISTER = 1,
         GETMESSAGEHISTORY = 2,
-        SENDMESSAGE = 3
+        SENDMESSAGE = 3,
+        SENDGRAPHS = 4
     }
 }

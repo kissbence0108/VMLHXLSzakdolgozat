@@ -4,6 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatApp"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="en"
+        lex:ResxLocalizationProvider.DefaultAssembly="ChatApp"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
         mc:Ignorable="d"
         Title="Login" Height="450" Width="600"
         WindowStyle="None"
@@ -65,7 +69,8 @@
 
 
 
-            <TextBlock Text="LOGIN&#x0a;VMLHXL"
+            <TextBlock Name="LogintextTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
                      Grid.Column="0"
@@ -76,7 +81,8 @@
                      FontFamily="Fonts/#Dosis"
                      Style="{DynamicResource fontStyle}"/>
         
-            <TextBlock Text="Username"
+            <TextBlock Name="UsernameTextblock"
+                     Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Grid.Column="2"
@@ -118,7 +124,8 @@
 
 
 
-            <TextBlock Text="Password"
+            <TextBlock Name="PasswordTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                        Grid.Column="2"
@@ -162,7 +169,8 @@
 
 
 
-            <TextBlock Text="Test your connection before you log in"
+            <TextBlock Name="ConnectionTextblock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Grid.Column="2"
@@ -171,7 +179,7 @@
                      FontFamily="Fonts/#Dosis"
                      Style="{StaticResource fontStyle}"/>
 
-            <Button Content="Test Connection" 
+            <Button Content="{lex:Loc}" 
                     x:Name="btnTestConnection" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
@@ -183,7 +191,7 @@
                     Command="{Binding TestConnectionCommand}"/>
         
         
-            <Button Content="Login" 
+            <Button Content="{lex:Loc}" 
                     x:Name="btnLogin" 
                     HorizontalAlignment="Center"  
                     VerticalAlignment="Center" 
@@ -196,7 +204,8 @@
                     IsEnabled="{Binding IsLoginButtonEnabled}"/>
     
     
-            <TextBlock Text="You dont have an account? Register here"
+            <TextBlock Name="QuestionTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Grid.Column="2"
@@ -204,7 +213,7 @@
                      FontFamily="Fonts/#Dosis"
                      Style="{StaticResource fontStyle}"/>
 
-            <Button Content="Register" 
+            <Button Content="{lex:Loc}" 
                     x:Name="Register_Page" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
@@ -215,7 +224,7 @@
                     Click="Register_Page_Click"/>
 
 
-            <Button Content="Exit" 
+            <Button Content="{lex:Loc}" 
                     x:Name="exitBttn" 
                     VerticalAlignment="Center"
                     Grid.Column="4"

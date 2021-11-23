@@ -11,7 +11,7 @@ namespace ChatApp
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (bool)value ? new SolidColorBrush(Color.FromRgb(81, 82, 80)) : new SolidColorBrush(Color.FromRgb(217, 217, 217));
+            return (bool)value ? new SolidColorBrush(Color.FromRgb(217, 217, 217)) : new SolidColorBrush(Color.FromRgb(54, 58, 64));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

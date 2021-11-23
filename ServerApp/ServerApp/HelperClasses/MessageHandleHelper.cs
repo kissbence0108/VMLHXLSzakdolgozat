@@ -214,5 +214,20 @@ namespace ServerApp.HelperClasses
             }
             return response;
         }
+
+        private static string GetGraphData(string content)
+        {
+            string response = string.Empty;
+            List<Message> graphList = new List<Message>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                string query = @"SELECT Users.Username, count(Users.Username) as MessagesSent FROM MessagesDatabase INNER JOIN Users ON MessagesDatabase.UserId = Users.Id GROUP BY Users.Username;";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                
+            }
+            return response;
+        }
     }
 }
