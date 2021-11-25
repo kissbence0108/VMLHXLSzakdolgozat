@@ -123,6 +123,9 @@
   <data name="btnTestConnection" xml:space="preserve">
     <value>Test Connection</value>
   </data>
+  <data name="ConfirmPasswordTextBlock" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
   <data name="ConnectionTextblock" xml:space="preserve">
     <value>Test your connection before you log in</value>
   </data>
@@ -155,6 +158,15 @@ VMLHXL</value>
   </data>
   <data name="QuestionTextBlock" xml:space="preserve">
     <value>You dont have an account? Register here!</value>
+  </data>
+  <data name="RegisterBttn" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterHereTextBlock" xml:space="preserve">
+    <value>Register Here</value>
+  </data>
+  <data name="RegistertextTextBlock" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="Register_Page" xml:space="preserve">
     <value>Register</value>

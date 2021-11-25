@@ -25,6 +25,8 @@ namespace ChatApp.View
             InitializeComponent();
             DataContext = new MessagesViewModel();
             //(DataContext as MessagesViewModel).InitServer();
+            listBox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
+            textbox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
         }
 
         private void listBox1_DataContextChanged(object sender, SelectionChangedEventArgs e)
@@ -40,5 +42,7 @@ namespace ChatApp.View
         {
             (DataContext as MessagesViewModel).RefreshMessageList();
         }
+
+        
     }
 }

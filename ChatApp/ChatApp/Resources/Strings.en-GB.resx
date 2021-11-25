@@ -120,14 +120,11 @@
   <data name="btnLogin" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="btnLogin1" xml:space="preserve">
-    <value>Login</value>
-  </data>
   <data name="btnTestConnection" xml:space="preserve">
     <value>Test Connection</value>
   </data>
-  <data name="btnTestConnection1" xml:space="preserve">
-    <value>Test Connection</value>
+  <data name="ConfirmPasswordTextBlock" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
   <data name="ConnectionTextblock" xml:space="preserve">
     <value>Test your connection before you log in</value>
@@ -139,7 +136,9 @@
     <value>Graphs</value>
   </data>
   <data name="HomeText" xml:space="preserve">
-    <value>Welcome to my Message Sending Application!</value>
+    <value>Welcome to my Message Sending Application!
+You can chat with others and 
+check a graph about statistic at the left panel!</value>
   </data>
   <data name="HomeTextBlock" xml:space="preserve">
     <value>Home</value>
@@ -150,20 +149,23 @@
   <data name="MenuTextblock" xml:space="preserve">
     <value>Menu</value>
   </data>
-  <data name="MenuTextblock1" xml:space="preserve">
-    <value>Menubase</value>
-  </data>
   <data name="MessagesTextBlock" xml:space="preserve">
     <value>Messages</value>
   </data>
   <data name="PasswordTextBlock" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="PasswordTextBlock1" xml:space="preserve">
-    <value>Password</value>
-  </data>
   <data name="QuestionTextBlock" xml:space="preserve">
     <value>You dont have an account? Register here!</value>
+  </data>
+  <data name="RegisterBttn" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterHereTextBlock" xml:space="preserve">
+    <value>Register Here</value>
+  </data>
+  <data name="RegistertextTextBlock" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="Register_Page" xml:space="preserve">
     <value>Register</value>
@@ -171,16 +173,7 @@
   <data name="String" xml:space="preserve">
     <value>VMLHXL</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>You can chat with others and</value>
-  </data>
-  <data name="String2" xml:space="preserve">
-    <value>check a graph about statistic at the left panel!</value>
-  </data>
   <data name="UsernameTextblock" xml:space="preserve">
-    <value>Username</value>
-  </data>
-  <data name="UsernameTextblock1" xml:space="preserve">
     <value>Username</value>
   </data>
 </root>

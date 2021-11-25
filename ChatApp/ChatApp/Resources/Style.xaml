@@ -5,7 +5,7 @@
 
     <Style x:Key="fontStyle" TargetType="{x:Type TextBlock}">
         <Setter Property="FontFamily"
-                Value="Fonts/#Dosis"/>
+                Value="Dosis"/>
         <Setter Property="VerticalAlignment"
                 Value="Center"/>
         <Setter Property="HorizontalAlignment"

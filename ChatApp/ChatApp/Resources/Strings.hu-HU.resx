@@ -124,6 +124,9 @@
     <value>Csatlakozás
 ellenőrzése</value>
   </data>
+  <data name="ConfirmPasswordTextBlock" xml:space="preserve">
+    <value>Jelszó megerősítése</value>
+  </data>
   <data name="ConnectionTextblock" xml:space="preserve">
     <value>Teszteld a kapcsolatot, mielőtt belépnél</value>
   </data>
@@ -155,6 +158,15 @@ egy grafikont a bal oldali panelen</value>
   </data>
   <data name="QuestionTextBlock" xml:space="preserve">
     <value>Még nem vagy tag? Itt regisztrálhatsz!</value>
+  </data>
+  <data name="RegisterBttn" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="RegisterHereTextBlock" xml:space="preserve">
+    <value>Regisztráció véglegesítése</value>
+  </data>
+  <data name="RegistertextTextBlock" xml:space="preserve">
+    <value>Regisztráció</value>
   </data>
   <data name="Register_Page" xml:space="preserve">
     <value>Regisztráció</value>

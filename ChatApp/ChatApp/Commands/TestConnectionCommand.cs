@@ -30,11 +30,13 @@ namespace ChatApp.Commands
             {
                 MessageBox.Show("Connected");
                 viewModel.IsLoginButtonEnabled = true;
+                viewModel.IsRegisterButtonEnabled = true;
             }
             else
             {
                 MessageBox.Show("Not Connected");
                 viewModel.IsLoginButtonEnabled = false;
+                viewModel.IsRegisterButtonEnabled = false;
             }
         }
     }

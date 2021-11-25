@@ -15,30 +15,7 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
 
-    <Window.Resources>
-
-        <Style x:Key="font_style" TargetType="TextBlock">
-
-            <Setter Property="FontFamily"
-                    Value="Fonts/#Dosis"/>
-
-            <Setter Property="VerticalAlignment"
-                    Value="Center"/>
-
-            <Setter Property="HorizontalAlignment"
-                    Value="Left"/>
-
-            <Setter Property="Foreground"
-                    Value="White"/>
-
-            <Setter Property="FontSize"
-                    Value="14"/>
-
-        </Style>
-
-
-
-    </Window.Resources>
+  
 
     <Border Background="#363a40"
             CornerRadius="20">
@@ -78,8 +55,8 @@
                      Grid.ColumnSpan="2"
                      Grid.RowSpan="2"
                      Margin="12,0,0,0"
-                     FontFamily="Fonts/#Dosis"
-                     Style="{DynamicResource fontStyle}"/>
+                     FontFamily="Dosis"
+                     Style="{StaticResource fontStyle}"/>
         
             <TextBlock Name="UsernameTextblock"
                      Text="{lex:Loc}"
@@ -87,7 +64,7 @@
                      HorizontalAlignment="Center"
                      Grid.Column="2"
                      Grid.Row="1"
-                     FontFamily="Fonts/#Dosis"
+                     FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
@@ -106,7 +83,7 @@
                  Grid.Column="2"
                  Grid.Row="2"
                  Background="#363a40"
-                 
+                 FontFamily="Dosis"
                  BorderThickness="0"
                  Width="250"
                  HorizontalContentAlignment="Center"
@@ -130,7 +107,7 @@
                      HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="3"
-                       FontFamily="Fonts/#Dosis"
+                       FontFamily="#Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
@@ -150,7 +127,7 @@
                  Grid.Column="2"
                  Grid.Row="4"
                  Background="#363a40"
-                 
+                 FontFamily="Dosis"
                  BorderThickness="0"
                  Width="250"
                  HorizontalContentAlignment="Center"
@@ -175,8 +152,7 @@
                      HorizontalAlignment="Center"
                      Grid.Column="2"
                      Grid.Row="5"
-                       
-                     FontFamily="Fonts/#Dosis"
+                     FontFamily="Dosis"  
                      Style="{StaticResource fontStyle}"/>
 
             <Button Content="{lex:Loc}" 
@@ -187,7 +163,7 @@
                     Grid.Row="6"
                     Width="120"
                     Height="40"
-                    FontFamily="Fonts/#Dosis"
+                    FontFamily="Dosis"
                     Command="{Binding TestConnectionCommand}"/>
         
         
@@ -199,7 +175,7 @@
                     Grid.Row="7"
                     Width="120"
                     Height="40"
-                    FontFamily="Fonts/#Dosis"
+                    FontFamily="Dosis"
                     Command="{Binding LoginCommand}"
                     IsEnabled="{Binding IsLoginButtonEnabled}"/>
     
@@ -210,7 +186,7 @@
                      HorizontalAlignment="Center"
                      Grid.Column="2"
                      Grid.Row="8"
-                     FontFamily="Fonts/#Dosis"
+                     FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
             <Button Content="{lex:Loc}" 
@@ -221,7 +197,9 @@
                     Grid.Row="9"
                     Width="120"
                     Height="40"
-                    Click="Register_Page_Click"/>
+                    Click="Register_Page_Click"
+                    FontFamily="Dosis"
+                    IsEnabled="{Binding IsRegisterButtonEnabled}"/>
 
 
             <Button Content="{lex:Loc}" 
@@ -232,6 +210,7 @@
                     Width="50"
                     Height="20"
                     Margin="20,0,0,0"
+                    FontFamily="Dosis"
                     Click="exitBttn_Click"/>
 
 

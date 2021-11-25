@@ -79,6 +79,15 @@ namespace ChatApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ConfirmPasswordTextBlock {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordTextBlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Test your connection before you log in.
         /// </summary>
         public static string ConnectionTextblock {
@@ -177,6 +186,33 @@ namespace ChatApp.Resources {
         public static string Register_Page {
             get {
                 return ResourceManager.GetString("Register_Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string RegisterBttn {
+            get {
+                return ResourceManager.GetString("RegisterBttn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register Here.
+        /// </summary>
+        public static string RegisterHereTextBlock {
+            get {
+                return ResourceManager.GetString("RegisterHereTextBlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string RegistertextTextBlock {
+            get {
+                return ResourceManager.GetString("RegistertextTextBlock", resourceCulture);
             }
         }
         

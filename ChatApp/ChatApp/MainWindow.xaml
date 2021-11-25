@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:ChatApp"
         xmlns:asd="clr-namespace:ChatApp.ViewModel"
         xmlns:lex="http://wpflocalizeextension.codeplex.com"
-        lex:LocalizeDictionary.DesignCulture="hu"
+        lex:LocalizeDictionary.DesignCulture="en"
         lex:ResxLocalizationProvider.DefaultAssembly="ChatApp"
         lex:ResxLocalizationProvider.DefaultDictionary="Strings"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStyle="None">
+        WindowStyle="None"
+        MouseDown="Window_MouseDown">
 
     <Window.Resources>
         <local:BoolToBrush x:Key="BoolToBrushConverter"/>
@@ -122,15 +123,16 @@
                     <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
                         <Grid Height="120">
                             <TextBlock Name="MenuTextblock"
-                                    Grid.Row="1"
+                                   Grid.Row="1"
                                    Grid.Column="0"
-                                   Margin="65,-20,0,0"
+                                   Margin="75,-20,0,0"
                                    Text="{lex:Loc}"
                                    Foreground="White"
                                    FontSize="20"
                                    Background="Transparent"
                                    HorizontalAlignment="Left"
-                                   VerticalAlignment="Center">
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource fontStyle}">
 
 
 
@@ -216,9 +218,8 @@
                                     </Image>
 
                                     <TextBlock Name="HomeTextBlock"
-                                            Text="{lex:Loc}"
-                                           Margin="29,0,0,0"
-                                           FontFamily="Fonts/raleway.semibold.ttf"
+                                           Text="{lex:Loc}"
+                                           Margin="25,0,0,0"
                                            Style="{StaticResource fontStyle}"/>
 
 
@@ -254,7 +255,6 @@
                                     <TextBlock Name="MessagesTextBlock"
                                             Text="{lex:Loc}"
                                            Margin="25,0,0,0"
-                                           FontFamily="Fonts/raleway.semibold.ttf"
                                            Style="{StaticResource fontStyle}"/>
 
                                 </StackPanel>

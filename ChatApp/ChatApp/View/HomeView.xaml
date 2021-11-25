@@ -18,7 +18,7 @@
                    Foreground="White"
                    FontWeight="Bold"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+                   Style="{StaticResource fontStyle}"  VerticalAlignment="Center"/>
 
     </Grid>
 </UserControl>

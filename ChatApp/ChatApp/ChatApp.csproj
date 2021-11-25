@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <NeutralLanguage>hu-HU</NeutralLanguage>
+    <NeutralLanguage></NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,8 +25,6 @@
     <None Remove="Assets\tgBtn_MouseOver.png" />
     <None Remove="Assets\toggle.png" />
     <None Remove="Assets\zoldnyil.png" />
-    <None Remove="Fonts\antipasto.ttf" />
-    <None Remove="Fonts\raleway.semibold.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,8 +65,6 @@
     <Resource Include="Assets\tgBtn_default.png" />
     <Resource Include="Assets\tgBtn_MouseOver.png" />
     <Resource Include="Assets\zoldnyil.png" />
-    <Resource Include="Fonts\antipasto.ttf" />
-    <Resource Include="Fonts\raleway.semibold.ttf" />
   </ItemGroup>
 
   <ItemGroup>

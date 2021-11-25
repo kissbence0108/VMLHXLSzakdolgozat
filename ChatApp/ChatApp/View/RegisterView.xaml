@@ -5,6 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ChatApp.View"
              mc:Ignorable="d" 
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="ChatApp"
+             lex:ResxLocalizationProvider.DefaultDictionary="Strings"
              Title="Register" Height="450" Width="600"
              Background="Transparent"
              AllowsTransparency="True"
@@ -38,7 +42,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="REGISTER&#x0a;VMLHXL"
+            <TextBlock Name="RegistertextTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
                      Grid.Column="0"
@@ -46,18 +51,19 @@
                      Grid.ColumnSpan="2"
                      Grid.RowSpan="2"
                      Margin="12,0,0,0"
-                     FontFamily="Fonts/#Dosis"
+                     FontFamily="Dosis"
                      Style="{DynamicResource fontStyle}"/>
 
 
 
 
-            <TextBlock Text="Username"
+            <TextBlock Name="UsernameTextblock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Grid.Column="2"
                      Grid.Row="1"
-                     FontFamily="Fonts/#Dosis"
+                     FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
@@ -76,7 +82,7 @@
                  Grid.Column="2"
                  Grid.Row="2"
                  Background="#363a40"
-                 
+                 FontFamily="Dosis"
                  BorderThickness="0"
                  Width="250"
                  HorizontalContentAlignment="Center"
@@ -93,12 +99,13 @@
             </StackPanel>
 
 
-            <TextBlock Text="Password"
+            <TextBlock Name="PasswordTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="3"
-                       FontFamily="Fonts/#Dosis"
+                       FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
@@ -119,6 +126,7 @@
                  Background="#363a40"
                  BorderThickness="0"
                  Width="250"
+                 FontFamily="Dosis"
                  HorizontalContentAlignment="Center"
                  Opacity="0.5"
                  Height="25"/>
@@ -131,13 +139,13 @@
                     Opacity="0.5"/>
             </StackPanel>
 
-            <TextBlock Text="Confirm Password"
+            <TextBlock Name="ConfirmPasswordTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                      Grid.Column="2"
-                     Grid.Row="5"
-                       
-                     FontFamily="Fonts/#Dosis"
+                     Grid.Row="5"  
+                     FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
@@ -159,6 +167,7 @@
                  BorderThickness="0"
                  Width="250"
                  HorizontalContentAlignment="Center"
+                 FontFamily="Dosis"
                  Opacity="0.5"
                  Height="25"/>
 
@@ -171,16 +180,17 @@
             </StackPanel>
 
 
-            <TextBlock Text="Register Here"
+            <TextBlock Name="RegisterHereTextBlock"
+                    Text="{lex:Loc}"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="7"
-                       FontFamily="Fonts/#Dosis"
+                       FontFamily="Dosis"
                      Style="{StaticResource fontStyle}"/>
 
 
-            <Button Content="Register" 
+            <Button Content="{lex:Loc}" 
                     x:Name="RegisterBttn" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
@@ -188,10 +198,10 @@
                     Grid.Row="8"
                     Width="120"
                     Height="40"
-                    FontFamily="Fonts/#Dosis"
+                    FontFamily="Dosis"
                     Command="{Binding RegisterCommand}"/>
 
-            <Button Content="Exit" 
+            <Button Content="{lex:Loc}" 
                     x:Name="exitBttn" 
                     VerticalAlignment="Center"
                     Grid.Column="4"
@@ -199,6 +209,7 @@
                     Width="50"
                     Height="20"
                     Margin="20,0,0,0"
+                    FontFamily="Dosis"
                     Click="exitBttn_Click"/>
 
 

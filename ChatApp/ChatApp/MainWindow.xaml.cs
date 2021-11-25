@@ -43,6 +43,13 @@ namespace ChatApp
 
         }
 
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
+                DragMove();
+
+        }
+
 
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)

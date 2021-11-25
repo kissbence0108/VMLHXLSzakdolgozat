@@ -26,10 +26,40 @@
         </Grid.ColumnDefinitions>
 
 
-        <TextBox x:Name="textbox1" Grid.Row="2" Grid.Column="1" Text="{Binding MessageToSend}"    />
-        <Button Content="Send Message"   Grid.Row="2" Grid.Column="2" Command="{Binding SendMessageCommand}" Width="200" />
-        <ListBox x:Name="listBox1" Grid.Row="0" Grid.Column="1" ItemsSource="{Binding MessagesCollection, UpdateSourceTrigger=PropertyChanged}"  Grid.ColumnSpan="2" SelectedIndex="{Binding ListIndex,  UpdateSourceTrigger=PropertyChanged}" SelectionChanged="listBox1_DataContextChanged"/>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="183,0,0,0" Grid.Row="1" VerticalAlignment="Center" Click="Button_Click"/>
+        <TextBox x:Name="textbox1" 
+                 Grid.Row="2" 
+                 Grid.Column="1" 
+                 Text="{Binding MessageToSend}"
+                 FontFamily="Dosis"
+                 Foreground="White"/>
+        
+        <Button Content="Send Message"   
+                Grid.Row="2" 
+                Grid.Column="2" 
+                Command="{Binding SendMessageCommand}"
+                FontFamily="Dosis"
+                Width="200"
+                FontSize="20"/>
+        
+        <ListBox x:Name="listBox1" 
+                 Grid.Row="0" Grid.Column="1" 
+                 ItemsSource="{Binding MessagesCollection, UpdateSourceTrigger=PropertyChanged}"  
+                 Grid.ColumnSpan="2" 
+                 SelectedIndex="{Binding ListIndex,  UpdateSourceTrigger=PropertyChanged}" 
+                 Foreground="White"
+                 FontFamily="Dosis"
+                 SelectionChanged="listBox1_DataContextChanged"/>
+        
+        <Button Content="Refresh" 
+                Grid.Column="2"
+                HorizontalAlignment="Left" 
+                Margin="150,0,0,0" 
+                Grid.Row="1"
+                FontSize="10"
+                VerticalAlignment="Center"
+                Width="50"
+                Height="18"
+                Click="Button_Click"/>
 
     </Grid>
 </UserControl>

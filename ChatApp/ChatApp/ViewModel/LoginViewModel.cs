@@ -13,6 +13,7 @@ namespace ChatApp.ViewModel
         private string username;
         private string password;
         private bool isLoginButtonEnabled;
+        private bool isRegisterButtonEnabled;
 
         #endregion
 
@@ -52,6 +53,18 @@ namespace ChatApp.ViewModel
             }
         }
 
+        public bool IsRegisterButtonEnabled
+        {
+            get { return isRegisterButtonEnabled; }
+            set
+            {
+                isRegisterButtonEnabled = value;
+                SendPropertyChanged(nameof(IsRegisterButtonEnabled));
+            }
+        }
+
+
+
         #endregion
 
         #region Constructor
@@ -69,6 +82,7 @@ namespace ChatApp.ViewModel
             Username = "admin";
             Password = "admin";
             IsLoginButtonEnabled = false;
+            IsRegisterButtonEnabled = false;
             TestConnectionCommand = new TestConnectionCommand(this);
             LoginCommand = new LoginCommand(this);
         }
