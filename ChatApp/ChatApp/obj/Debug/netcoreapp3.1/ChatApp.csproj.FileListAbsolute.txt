@@ -211,7 +211,6 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\e
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.Resources.Strings.hu-HU.resources
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
-C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Emoji.Wpf.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.GlyphLayout.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.OpenFont.dll

@@ -79,8 +79,6 @@ namespace ChatApp.ViewModel
 
         private void Init()
         {
-            Username = "admin";
-            Password = "admin";
             IsLoginButtonEnabled = false;
             IsRegisterButtonEnabled = false;
             TestConnectionCommand = new TestConnectionCommand(this);

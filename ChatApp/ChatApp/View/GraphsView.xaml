@@ -9,23 +9,19 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <!--<TextBlock Text="graphs"
-                   FontSize="72"
-                   Foreground="White"
-                   FontWeight="Bold"
-                   HorizontalAlignment="Center"/>-->
 
-        <lvc:PieChart LegendLocation="Bottom" Series="{Binding SeriesCollection}" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}">
-            <!--<lvc:PieChart.Series>
-                <lvc:PieSeries Title="Maria" Values="3" DataLabels="True"
-                               LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Charles" Values="4" DataLabels="True" 
-                               LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Frida" Values="6" DataLabels="True" 
-                               LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Frederic" Values="2" DataLabels="True" 
-                               LabelPoint="{Binding PointLabel}"/>
-            </lvc:PieChart.Series>-->
+
+        <lvc:PieChart LegendLocation="Bottom" 
+                      Series="{Binding SeriesCollection}" 
+                      DataClick="Chart_OnDataClick" 
+                      Hoverable="False" 
+                      DataTooltip="{x:Null}"
+                      Width="300"
+                      Height="350"
+
+                      FontFamily="Dosis"
+                      Foreground="White">
+
         </lvc:PieChart>
     </Grid>
 </UserControl>

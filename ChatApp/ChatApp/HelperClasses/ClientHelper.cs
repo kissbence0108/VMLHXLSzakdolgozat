@@ -232,13 +232,13 @@ namespace ChatApp.HelperClasses
             switch (splittedContent[1])
             {
                 case "SUCCESFUL":
-                    MessageBox.Show("reg ok");
+                    MessageBox.Show("Registration was successful!");
                     break;
                 case "FAILED":
-                    MessageBox.Show("registration was not possible");
+                    MessageBox.Show("Registration was not possible!");
                     break;
                 case "USERALREADYEXISTS":
-                    MessageBox.Show("Sorry but the username exists already in the db");
+                    MessageBox.Show("Sorry but the username already exist in the database!");
                     break;
                 default:
                     break;

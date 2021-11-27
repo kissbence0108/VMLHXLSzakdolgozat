@@ -15,6 +15,7 @@
     <None Remove="Assets\icons8-house-96.png" />
     <None Remove="Assets\icons8-messages-96.png" />
     <None Remove="Assets\icons8-pie-chart-96.png" />
+    <None Remove="Assets\swap.png" />
     <None Remove="Assets\tgBtn_default.png" />
     <None Remove="Assets\tgBtn_MouseOver.png" />
     <None Remove="Assets\toggle.png" />
@@ -39,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Assets\daynight.png" />
     <Resource Include="Assets\greybackground.jpg" />
     <Resource Include="Assets\greyslidebar.jpg" />
@@ -50,6 +47,7 @@
     <Resource Include="Assets\icons8-house-96.png" />
     <Resource Include="Assets\icons8-messages-96.png" />
     <Resource Include="Assets\icons8-pie-chart-96.png" />
+    <Resource Include="Assets\swap.png" />
     <Resource Include="Assets\tgBtn_default.png" />
     <Resource Include="Assets\tgBtn_MouseOver.png" />
   </ItemGroup>
