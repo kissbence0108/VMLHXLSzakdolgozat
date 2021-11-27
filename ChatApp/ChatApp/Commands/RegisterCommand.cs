@@ -2,7 +2,9 @@
 using ChatApp.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ChatApp.Commands
@@ -24,68 +26,67 @@ namespace ChatApp.Commands
 
         public void Execute(object parameter)
         {
-            if(viewModel.Password == viewModel.PasswordConfirm)
+            string password = new System.Net.NetworkCredential(string.Empty, viewModel.Password).Password;
+            string confirmPassword = new System.Net.NetworkCredential(string.Empty, viewModel.PasswordConfirm).Password;
+            if (!ContainsUpperLetter(password))
             {
-                HelperClasses.ClientHelper.SendMessage(HelperClasses.MessageHandleEnum.REGISTER, Constants.Separator + viewModel.Username + Constants.Separator + viewModel.Password);
+                MessageBox.Show("fk u ,review ur password!");
             }
-            
-            /*
-             
-            var Username = RegisterUser;
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bence\Documents\Users.mdf;Integrated Security=True;Connect Timeout=30";
-
-            using (SqlConnection conn = new SqlConnection(connString))
+            else if(!ContainsSpecialCharacter(password))
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Users where Username='" + RegisterUser.Text + "' ", conn);
-                try
+                MessageBox.Show("fk u ,review ur password!");
+            }
+            else
+            {
+                if (password == confirmPassword)
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.HasRows == false)
-                        {
-                            if (RegisterPass.Text == RegisterPassC.Text)
-                            {
-                                //myPersonalGUID = new GUID();
-                                //send to server => "GUID-LOGIN-username-password";
-                                //server send => "GUID-LOGIN-TRUE"
-                                //nugget.encrypt(password)
-
-                                string cmdString = "INSERT INTO Users (Username,Password) VALUES ('" + RegisterUser.Text + "', '" + RegisterPass.Text + "')";
-                                using (SqlConnection connect = new SqlConnection(connString))
-                                {
-                                    using (SqlCommand comm = new SqlCommand())
-                                    {
-                                        comm.Connection = connect;
-                                        comm.CommandText = cmdString;
-
-
-                                        connect.Open();
-                                        comm.ExecuteNonQuery();
-
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                        while (reader.Read())
-                        {
-
-                        }
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    HelperClasses.ClientHelper.SendMessage(HelperClasses.MessageHandleEnum.REGISTER, Constants.Separator + viewModel.Username + Constants.Separator + ComputeSha256Hash(password));
                 }
             }
-
-            */
         }
+        public bool ContainsUpperLetter(string content)
+        {
+            byte[] asciiBytes = Encoding.ASCII.GetBytes(content);
+            for (int i = 0; i < asciiBytes.Length; i++)
+            {
+                if (asciiBytes[i] > 64 && asciiBytes[i] < 91)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ContainsSpecialCharacter(string content)
+        {
+            byte[] asciiBytes = Encoding.ASCII.GetBytes(content);
+            for (int i = 0; i < asciiBytes.Length; i++)
+            {
+                if (asciiBytes[i] > 32 && asciiBytes[i] < 48)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
     }
 }

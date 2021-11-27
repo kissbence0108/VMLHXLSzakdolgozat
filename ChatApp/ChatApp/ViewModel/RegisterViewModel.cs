@@ -1,4 +1,5 @@
 ﻿using ChatApp.Commands;
+using System.Security;
 using System.Windows.Input;
 
 namespace ChatApp.ViewModel
@@ -9,12 +10,12 @@ namespace ChatApp.ViewModel
 
         public string Username { get { return username; } set { username = value; } }
 
-        public string Password { get { return password; } set { password = value; } }
+        public SecureString Password { get { return password; } set { password = value; } }
 
-        public string PasswordConfirm { get { return passwordConfirmed; } set { passwordConfirmed = value; } }
+        public SecureString PasswordConfirm { get { return passwordConfirmed; } set { passwordConfirmed = value; } }
         private string username { get; set; }
-        private string password { get; set; }
-        private string passwordConfirmed { get; set; }
+        private SecureString password { get; set; }
+        private SecureString passwordConfirmed { get; set; }
 
         public RegisterViewModel()
         {

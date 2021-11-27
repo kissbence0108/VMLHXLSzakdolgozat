@@ -15,5 +15,10 @@ namespace ChatApp.HelperClasses
         public string Username { get; set; }
         public string MessageText { get; set; }
         public DateTime? SentTime { get; set; }
+
+        public override string ToString()
+        {
+            return "(" + SentTime + ") " + Username + ": " + MessageText;
+        }
     }
 }

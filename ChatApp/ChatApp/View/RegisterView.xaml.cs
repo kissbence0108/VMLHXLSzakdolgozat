@@ -25,5 +25,15 @@ namespace ChatApp.View
         {
             this.Close();
         }
+
+        private void RegisterPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            (DataContext as RegisterViewModel).Password = ((PasswordBox)sender).SecurePassword;
+        }
+
+        private void RegisterPasswordConfirmBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            (DataContext as RegisterViewModel).PasswordConfirm = ((PasswordBox)sender).SecurePassword;
+        }
     }
 }

@@ -14,6 +14,22 @@
           "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {}
         }
       },
+      "Emoji.Wpf/0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Emoji.Wpf.dll": {},
+          "lib/netcoreapp3.1/Typography.GlyphLayout.dll": {},
+          "lib/netcoreapp3.1/Typography.OpenFont.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Emoji.Wpf.dll": {},
+          "lib/netcoreapp3.1/Typography.GlyphLayout.dll": {},
+          "lib/netcoreapp3.1/Typography.OpenFont.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Fody/6.6.0": {
         "type": "package",
         "build": {
@@ -419,6 +435,24 @@
         "lib/netstandard1.3/DocumentFormat.OpenXml.xml",
         "lib/netstandard2.0/DocumentFormat.OpenXml.dll",
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
+      ]
+    },
+    "Emoji.Wpf/0.3.3": {
+      "sha512": "2LbqyW8v9Q731iEobd0Zq/OgssdLjlWx6CeVEt4ZPEL0KL/3ClAJPH2eq265BbtHwylolTcsna8sD6OWMruxig==",
+      "type": "package",
+      "path": "emoji.wpf/0.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "emoji.wpf.0.3.3.nupkg.sha512",
+        "emoji.wpf.nuspec",
+        "icon.png",
+        "lib/net40/Emoji.Wpf.dll",
+        "lib/net40/Typography.GlyphLayout.dll",
+        "lib/net40/Typography.OpenFont.dll",
+        "lib/netcoreapp3.1/Emoji.Wpf.dll",
+        "lib/netcoreapp3.1/Typography.GlyphLayout.dll",
+        "lib/netcoreapp3.1/Typography.OpenFont.dll"
       ]
     },
     "Fody/6.6.0": {
@@ -1187,6 +1221,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DocumentFormat.OpenXml >= 2.13.1",
+      "Emoji.Wpf >= 0.3.3",
       "Fody >= 6.6.0",
       "Gu.Localization >= 6.7.0",
       "Json.Net >= 1.0.33",
@@ -1249,6 +1284,10 @@
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[2.13.1, )"
+          },
+          "Emoji.Wpf": {
+            "target": "Package",
+            "version": "[0.3.3, )"
           },
           "Fody": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

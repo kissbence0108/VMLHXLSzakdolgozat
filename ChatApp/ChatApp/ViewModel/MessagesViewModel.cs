@@ -66,6 +66,7 @@ namespace ChatApp.ViewModel
             SendMessageCommand = new SendMessageCommand(this);
             MessagesCollection = new ObservableCollection<string>();
             GetMessageHistory();
+            ClientHelper.MessagesViewModel = this;
             //backgroundWorker = new System.ComponentModel.BackgroundWorker();
             //backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
             //backgroundWorker.RunWorkerAsync();
@@ -76,7 +77,7 @@ namespace ChatApp.ViewModel
         private void GetMessageHistory()
         {
             ClientHelper.SendMessage(MessageHandleEnum.GETMESSAGEHISTORY, "");
-            RefreshMessageList();
+           // RefreshMessageList();
         }
 
         public void RefreshMessageList()

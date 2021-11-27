@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MK4j81ltu1KtD8SaK/bpTJsoj4u/UPsICGZTFeEUyET70oa8u/BbZpvvFHmbOE+j7nE19g8wCTuz0z3JncM3ZQ==",
+  "dgSpecHash": "vVVa0+yslSlvXSexEUJNFSQXOuM739lMKrdPGS5lvoLQwghCfVhDlQNHqJFJmU6MTMGL+bJyD6KDaNtoMmihZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bence\\Documents\\GitHub\\master\\ChatApp\\ChatApp\\ChatApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bence\\.nuget\\packages\\documentformat.openxml\\2.13.1\\documentformat.openxml.2.13.1.nupkg.sha512",
+    "C:\\Users\\Bence\\.nuget\\packages\\emoji.wpf\\0.3.3\\emoji.wpf.0.3.3.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\fody\\6.6.0\\fody.6.6.0.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\gu.localization\\6.7.0\\gu.localization.6.7.0.nupkg.sha512",
     "C:\\Users\\Bence\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",

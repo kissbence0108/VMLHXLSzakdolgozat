@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.13.1, )"
             },
+            "Emoji.Wpf": {
+              "target": "Package",
+              "version": "[0.3.3, )"
+            },
             "Fody": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

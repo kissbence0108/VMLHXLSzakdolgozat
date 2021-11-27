@@ -10,6 +10,6 @@ namespace ServerApp.HelperClasses
         REGISTER = 1,
         GETMESSAGEHISTORY = 2,
         SENDMESSAGE = 3,
-        SENDGRAPHS = 4
+        GRAPHDATA = 4
     }
 }

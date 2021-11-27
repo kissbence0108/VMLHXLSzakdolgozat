@@ -31,13 +31,17 @@ namespace ServerApp.HelperClasses
             {
                 messageEnum = MessageHandleEnum.SENDMESSAGE;
             }
+            else if (content.StartsWith("GRAPHDATA"))
+            {
+                messageEnum = MessageHandleEnum.GRAPHDATA;
+            }
             switch (messageEnum)
             {
                 case MessageHandleEnum.LOGIN:
                     response = GetLogin(content);
                     break;
                 case MessageHandleEnum.REGISTER:
-                    response = RegisternewUser(content);
+                    response = RegisterNewUser(content);
                     break;
                 case MessageHandleEnum.GETMESSAGEHISTORY:
                     response = GetMessageHistory();
@@ -45,14 +49,17 @@ namespace ServerApp.HelperClasses
                 case MessageHandleEnum.SENDMESSAGE:
                     response = MessageSentFromClient(content);
                     break;
+                case MessageHandleEnum.GRAPHDATA:
+                    response = GetGraphData();
+                    break;
             }
 
             return response;
         }
 
-        private static string RegisternewUser(string content)
+        private static string RegisterNewUser(string content)
         {
-            string response ="REGISTER" + Separator + "FALSE";
+            string response;
             content = content.Split(EndOfTransmissionSeparator)[0];
             string[] splittedContent = content.Split(Separator);
 
@@ -61,7 +68,7 @@ namespace ServerApp.HelperClasses
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Users where Username='" + splittedContent[1] + "' ", conn);
                 try
-                {
+                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows == false)
@@ -83,15 +90,20 @@ namespace ServerApp.HelperClasses
 
                                     connect.Open();
                                     comm.ExecuteNonQuery();
-                                    response = "REGISTER" + Separator + "TRUE";
+                                    response = "REGISTER" + Separator + "SUCCESFUL";
                                 }
                             }
+                        }
+                        else
+                        {
+                            response = "REGISTER" + Separator + "USERALREADYEXISTS";
                         }
                     }
 
                 }
                 catch (Exception ex)
                 {
+                    response = "REGISTER" + Separator + "FAILED";
                     Console.WriteLine(ex.Message);
                 }
             }
@@ -163,7 +175,7 @@ namespace ServerApp.HelperClasses
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        do
                         {
                             foreach (var element in reader)
                             {
@@ -173,7 +185,7 @@ namespace ServerApp.HelperClasses
                                 messageList.Add(new Message(usernameFromDb, messageFromDb, sentTimeFromDb));
                             }
 
-                        }
+                        } while (reader.Read());
                         response = "GETMESSAGEHISTORY"+Separator + JsonConvert.SerializeObject(messageList);
 
                     }
@@ -215,19 +227,41 @@ namespace ServerApp.HelperClasses
             return response;
         }
 
-        private static string GetGraphData(string content)
+        private static string GetGraphData()
         {
             string response = string.Empty;
-            List<Message> graphList = new List<Message>();
+            List<Tuple<string,int>> graphList = new List<Tuple<string, int>>();
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
                 string query = @"SELECT Users.Username, count(MessagesDatabase.Message) as MessagesSent FROM MessagesDatabase INNER JOIN Users ON MessagesDatabase.UserId = Users.Id GROUP BY Users.Username;";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                try
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        do
+                        {
+                            foreach (var element in reader)
+                            {
+                                string username = ((element as IDataRecord).GetValue(0)).ToString();
+                                int messageNumber = Int32.Parse((element as IDataRecord).GetValue(1).ToString());
+                                graphList.Add(new Tuple<string, int>(username, messageNumber));
+                            }
 
-                
+                        } while (reader.Read());
+                        response = "GRAPHDATA" + Separator + JsonConvert.SerializeObject(graphList);
+                    }
+                }
+                catch (Exception e)
+                {
+
+                }
+
+
             }
             return response;
         }
     }
 }
+

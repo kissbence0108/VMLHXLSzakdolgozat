@@ -9,6 +9,8 @@ namespace ChatApp.HelperClasses
         LOGIN = 0,
         REGISTER = 1,
         GETMESSAGEHISTORY = 2,
-        SENDMESSAGE = 3
+        SENDMESSAGE = 3,
+        GRAPHDATA = 4
+
     }
 }

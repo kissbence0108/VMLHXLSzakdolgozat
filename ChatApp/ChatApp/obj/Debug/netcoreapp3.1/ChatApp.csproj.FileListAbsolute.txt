@@ -171,51 +171,6 @@ C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsVi
 C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
 C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
 C:\Users\Bence\Desktop\ghv\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.exe
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.deps.json
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.json
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.dev.json
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.pdb
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Json.Net.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\Style.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.lref
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.g.resources
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfoInputs.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfo.cs
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CoreCompileInputs.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.Fody.CopyLocal.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CopyComplete
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.dll
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.pdb
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.genruntimeconfig.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csprojAssemblyReference.cache
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
@@ -256,3 +211,89 @@ C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\e
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.Resources.Strings.hu-HU.resources
 C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Emoji.Wpf.dll
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.GlyphLayout.dll
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.OpenFont.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.exe
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.deps.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.runtimeconfig.dev.json
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\ChatApp.pdb
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\en-GB\ChatApp.resources.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Emoji.Wpf.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.GlyphLayout.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Typography.OpenFont.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Gu.Localization.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Json.Net.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\LiveCharts.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\LiveCharts.Wpf.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Management.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\WPFLocalizeExtension.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\XAMLMarkupExtensions.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Management.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+F:\d bday\ChatApp\ChatApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\ButtonStyle.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\Style.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\Resources\TextBoxStyle.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp_MarkupCompile.lref
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\App.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\MainWindow.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\GraphsView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\HomeView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\Login.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\MessagesView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\View\RegisterView.baml
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.g.resources
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.Resources.Strings.resources
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.Resources.Strings.en-GB.resources
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.Resources.Strings.hu-HU.resources
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.GenerateResource.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfoInputs.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.AssemblyInfo.cs
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CoreCompileInputs.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.Fody.CopyLocal.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\en-GB\ChatApp.resources.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\hu-HU\ChatApp.resources.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CopyComplete
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.dll
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.pdb
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.genruntimeconfig.cache
+F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csprojAssemblyReference.cache

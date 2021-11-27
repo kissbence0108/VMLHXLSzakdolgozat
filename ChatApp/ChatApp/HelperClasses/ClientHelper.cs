@@ -1,7 +1,9 @@
 ﻿using ChatApp.Resources;
+using ChatApp.ViewModel;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -25,7 +27,10 @@ namespace ChatApp.HelperClasses
             new ManualResetEvent(false);
         private static ManualResetEvent isRegistrationDone =
             new ManualResetEvent(false);
-        
+        private static ManualResetEvent isGraphDataDone =
+            new ManualResetEvent(false);
+
+
 
         private static bool isConnected;
         private static bool isLoginValid;
@@ -33,6 +38,9 @@ namespace ChatApp.HelperClasses
 
         public static Socket Client;
         public static List<Message> MessageList { get; set; }
+
+        public static List<Tuple<string,int>> GraphData { get; set; }
+        public static MessagesViewModel MessagesViewModel { get; set; }
 
         public static bool IsServerConnected()
         {
@@ -179,6 +187,10 @@ namespace ChatApp.HelperClasses
             {
                 messageEnum = MessageHandleEnum.SENDMESSAGE;
             }
+            else if (content.StartsWith("GRAPHDATA"))
+            {
+                messageEnum = MessageHandleEnum.GRAPHDATA;
+            }
             switch (messageEnum)
             {
                 case MessageHandleEnum.LOGIN:
@@ -186,7 +198,7 @@ namespace ChatApp.HelperClasses
                     isLoginDone.Set();
                     break;
                 case MessageHandleEnum.REGISTER:
-                    SetIsRegistrationCompleted(CheckLoginResponse(content));
+                    CheckRegistrationResponse(content);
                     isRegistrationDone.Set();
                     break;
                 case MessageHandleEnum.GETMESSAGEHISTORY:
@@ -197,13 +209,40 @@ namespace ChatApp.HelperClasses
                     AddMessageToMessageList(content);
                     isSendingMessageDone.Set();
                     break;
+                case MessageHandleEnum.GRAPHDATA:
+                    AddGraphData(content);
+                    isGraphDataDone.Set();
+                    break;
             }
 
         }
 
-        private static void SetIsRegistrationCompleted(bool v)
+        private static void AddGraphData(string content)
         {
-            throw new NotImplementedException();
+            content = content.Split(Constants.EndOfTransmissionSeparator)[0];
+            string[] splittedContent = content.Split(Constants.Separator);
+            GraphData = JsonConvert.DeserializeObject<List<Tuple<string,int>>>(splittedContent[1]);
+        }
+
+        private static void CheckRegistrationResponse(string content)
+        {
+            content = content.Split(Constants.EndOfTransmissionSeparator)[0];
+            string[] splittedContent = content.Split(Constants.Separator);
+            isRegistrationDone.Set();
+            switch (splittedContent[1])
+            {
+                case "SUCCESFUL":
+                    MessageBox.Show("reg ok");
+                    break;
+                case "FAILED":
+                    MessageBox.Show("registration was not possible");
+                    break;
+                case "USERALREADYEXISTS":
+                    MessageBox.Show("Sorry but the username exists already in the db");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private static void AddMessageToMessageList(string content)
@@ -212,6 +251,7 @@ namespace ChatApp.HelperClasses
             string[] splittedContent = content.Split(Constants.Separator);
             var message = JsonConvert.DeserializeObject<Message>(splittedContent[1]);
             MessageList.Add(message);
+            //MessagesViewModel.RefreshMessageList();
         }
 
         private static void PopulateMessageList(string content)
@@ -248,6 +288,9 @@ namespace ChatApp.HelperClasses
                 case MessageHandleEnum.SENDMESSAGE:
                     message = "SENDMESSAGE" + message;
                     break;
+                case MessageHandleEnum.GRAPHDATA:
+                    message = "GRAPHDATA" + message;
+                    break;
             }
 
             message = message + Constants.EndOfTransmissionSeparator;
@@ -265,13 +308,16 @@ namespace ChatApp.HelperClasses
                     isLoginDone.WaitOne();
                     break;
                 case MessageHandleEnum.REGISTER:
-                    message = "REGISTER" + message;
+                    isRegistrationDone.WaitOne();
                     break;
                 case MessageHandleEnum.GETMESSAGEHISTORY:
                     isGettingMessageHistoryDone.WaitOne();
                     break;
                 case MessageHandleEnum.SENDMESSAGE:
                     isSendingMessageDone.WaitOne();
+                    break;
+                case MessageHandleEnum.GRAPHDATA:
+                    isGraphDataDone.WaitOne();
                     break;
             }
 

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\horvath5g\Source\Repos\master\ChatApp\ChatApp\obj\Release\netcoreapp3.1\
+F:\d bday\ChatApp\ChatApp\obj\Release\netcoreapp3.1\
 ChatApp
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\horvath5g\Source\Repos\master\ChatApp\ChatApp\App.xaml
-2-1376777318
+F:\d bday\ChatApp\ChatApp\App.xaml
+91358682624
 
-465254801
-192-1533232326
-Login.xaml;MainWindow.xaml;
+301024516604
+207410119557
+MainWindow.xaml;Resources\ButtonStyle.xaml;Resources\Style.xaml;Resources\TextBoxStyle.xaml;View\GraphsView.xaml;View\HomeView.xaml;View\Login.xaml;View\MessagesView.xaml;View\RegisterView.xaml;
 
-True
+False
 

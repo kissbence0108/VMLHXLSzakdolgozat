@@ -26,11 +26,11 @@
         <Setter Property="Margin"
                 Value="30,0,0,0"/>
         <Setter Property="Background"
-                Value="#38382a"/>
+                Value="#363a40"/>
         <Setter Property="Foreground"
                 Value="White"/>
         <Setter Property="FontFamily"
-                Value="Fonts/Raleway-Regular.ttf"/>
+                Value="Dosis"/>
         <Setter Property="HorizontalOffset"
                 Value="15"/>
         <Setter Property="VerticalOffset"

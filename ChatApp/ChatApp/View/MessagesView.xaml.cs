@@ -1,4 +1,5 @@
-﻿using ChatApp.ViewModel;
+﻿using ChatApp.HelperClasses;
+using ChatApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,6 +28,7 @@ namespace ChatApp.View
             //(DataContext as MessagesViewModel).InitServer();
             listBox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
             textbox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
+            listBox1.ItemsSource = ClientHelper.MessageList;
         }
 
         private void listBox1_DataContextChanged(object sender, SelectionChangedEventArgs e)

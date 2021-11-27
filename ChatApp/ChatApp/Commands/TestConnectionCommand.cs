@@ -28,13 +28,13 @@ namespace ChatApp.Commands
             ClientHelper.InitServer();
             if (ClientHelper.IsServerConnected())
             {
-                MessageBox.Show("Connected");
+                MessageBox.Show("Successfully connected to the server!");
                 viewModel.IsLoginButtonEnabled = true;
                 viewModel.IsRegisterButtonEnabled = true;
             }
             else
             {
-                MessageBox.Show("Not Connected");
+                MessageBox.Show("Failed to connect to the server!");
                 viewModel.IsLoginButtonEnabled = false;
                 viewModel.IsRegisterButtonEnabled = false;
             }
