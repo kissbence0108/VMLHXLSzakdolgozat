@@ -9,14 +9,14 @@ namespace ChatApp.Commands
     public class UpdateViewCommand : ICommand
     {
 
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged; // property
 
-        private MainViewModel viewModel;
-        public UpdateViewCommand(MainViewModel viewModel)
+        private MainViewModel viewModel; // változó
+        public UpdateViewCommand(MainViewModel viewModel) // konstruktor 
         {
             this.viewModel = viewModel;
         }
-        public bool CanExecute(object parameter)
+        public bool CanExecute(object parameter) //metódus
         {
             return true;
         }

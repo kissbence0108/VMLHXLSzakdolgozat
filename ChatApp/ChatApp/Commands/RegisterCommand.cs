@@ -30,11 +30,11 @@ namespace ChatApp.Commands
             string confirmPassword = new System.Net.NetworkCredential(string.Empty, viewModel.PasswordConfirm).Password;
             if (!ContainsUpperLetter(password))
             {
-                MessageBox.Show("fk u ,review ur password!");
+                MessageBox.Show("Your password is incorrect!");
             }
             else if(!ContainsSpecialCharacter(password))
             {
-                MessageBox.Show("fk u ,review ur password!");
+                MessageBox.Show("Your password is incorrect!");
             }
             else
             {

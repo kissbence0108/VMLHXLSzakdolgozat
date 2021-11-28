@@ -153,7 +153,8 @@ check a graph about statistic at the left panel!</value>
     <value>Messages</value>
   </data>
   <data name="PasswordTextBlock" xml:space="preserve">
-    <value>Password</value>
+    <value>Password
+</value>
   </data>
   <data name="QuestionTextBlock" xml:space="preserve">
     <value>You dont have an account? Register here!</value>

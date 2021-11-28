@@ -163,6 +163,15 @@ namespace ChatApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to It must contain at least one uppercase letter and one special character..
+        /// </summary>
+        public static string PasswordRestrictions {
+            get {
+                return ResourceManager.GetString("PasswordRestrictions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string PasswordTextBlock {

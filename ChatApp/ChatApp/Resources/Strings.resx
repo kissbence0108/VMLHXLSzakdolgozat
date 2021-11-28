@@ -153,6 +153,9 @@ VMLHXL</value>
   <data name="MessagesTextBlock" xml:space="preserve">
     <value>Messages</value>
   </data>
+  <data name="PasswordRestrictions" xml:space="preserve">
+    <value>It must contain at least one uppercase letter and one special character.</value>
+  </data>
   <data name="PasswordTextBlock" xml:space="preserve">
     <value>Password</value>
   </data>

@@ -153,6 +153,9 @@ egy grafikont a bal oldali panelen</value>
   <data name="MessagesTextBlock" xml:space="preserve">
     <value>Üzenetek</value>
   </data>
+  <data name="PasswordRestrictions" xml:space="preserve">
+    <value>Tartalmaznia kell legalább egy nagy betűt és egy speciális karaktert.</value>
+  </data>
   <data name="PasswordTextBlock" xml:space="preserve">
     <value>Jelszó</value>
   </data>
