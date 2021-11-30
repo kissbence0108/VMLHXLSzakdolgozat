@@ -28,14 +28,12 @@ namespace ChatApp.View
             //(DataContext as MessagesViewModel).InitServer();
             listBox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
             textbox1.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#0000ffff");
-            listBox1.ItemsSource = ClientHelper.MessageList;
         }
 
         private void listBox1_DataContextChanged(object sender, SelectionChangedEventArgs e)
         {
             var listBox = sender as ListBox;
             if (listBox == null || listBox.SelectedItem == null || listBox.Items == null) return;
-
             listBox.Items.MoveCurrentTo(listBox.SelectedItem);
             listBox.ScrollIntoView(listBox.SelectedItem);
         }

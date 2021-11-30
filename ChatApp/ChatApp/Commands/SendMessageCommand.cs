@@ -21,9 +21,9 @@ namespace ChatApp.Commands
             return true;
         }
 
-        public void Execute(object parameter)
+        public async void Execute(object parameter)
         {
-            viewModel.SendMessage();
+            await viewModel.SendMessage();
         }
     }
 }

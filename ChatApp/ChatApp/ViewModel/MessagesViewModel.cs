@@ -74,18 +74,18 @@ namespace ChatApp.ViewModel
         }
 
 
-        private void GetMessageHistory()
+        private async void GetMessageHistory()
         {
-            ClientHelper.SendMessage(MessageHandleEnum.GETMESSAGEHISTORY, "");
-           // RefreshMessageList();
+            await ClientHelper.SendMessage(MessageHandleEnum.GETMESSAGEHISTORY, "");
+            RefreshMessageList();
         }
 
         public void RefreshMessageList()
         {
-            MessagesCollection.Clear();
-            foreach (Message message in ClientHelper.MessageList)
+            MessagesCollection = new ObservableCollection<string>();
+            foreach (var message in ClientHelper.MessageList)
             {
-                MessagesCollection.Add("(" + message.SentTime + ") " + message.Username + ": " + message.MessageText);
+                MessagesCollection.Add(message.ToString());
             }
             ListIndex = MessagesCollection.Count - 1;
         }
@@ -97,11 +97,13 @@ namespace ChatApp.ViewModel
 
 
 
-        public void SendMessage()
+        public async Task SendMessage()
         {
             Message message = new Message(Application.Current.Properties["username"].ToString(), MessageToSend, null);
             string messageJson = JsonConvert.SerializeObject(message);
-            ClientHelper.SendMessage(MessageHandleEnum.SENDMESSAGE, Constants.Separator + messageJson);
+            await ClientHelper.SendMessage(MessageHandleEnum.SENDMESSAGE, Constants.Separator + messageJson);
+            MessageToSend = "";
+            Thread.Sleep(1000);
             RefreshMessageList();
 
         }

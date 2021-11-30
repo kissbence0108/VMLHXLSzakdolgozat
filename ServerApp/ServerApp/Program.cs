@@ -44,7 +44,6 @@ public class AsynchronousSocketListener
     {
         // Establish the local endpoint for the socket.  
         // The DNS name of the computer  
-        // running the listener is "host.contoso.com".  
         IPHostEntry ipHostInfo = Dns.GetHostEntry("localhost");
         IPAddress ipAddress = ipHostInfo.AddressList[0];
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 54000);
@@ -167,19 +166,6 @@ public class AsynchronousSocketListener
     }
 
 
-
-    private static void SendError(Socket handler, String error)
-    {
-        IDictionary<string, string> data = new Dictionary<string, string>
-        {
-            ["error"] = error,
-
-        };
-
-        byte[] byteData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(data));
-        handler.BeginSend(byteData, 0, byteData.Length, 0,
-            new AsyncCallback(SendCallback), handler);
-    }
 
     private static void Send(Socket handler, String data)
     {

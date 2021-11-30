@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 
@@ -25,9 +26,10 @@ namespace ChatApp.Commands
             return true;
         }
 
-        public void Execute(object parameter)
+        public async void Execute(object parameter)
         {
-             ClientHelper.SendMessage(MessageHandleEnum.LOGIN, Constants.Separator + viewModel.Username + Constants.Separator + ComputeSha256Hash(viewModel.Password));
+            await ClientHelper.SendMessage(MessageHandleEnum.LOGIN, Constants.Separator + viewModel.Username + Constants.Separator + ComputeSha256Hash(viewModel.Password));
+            Thread.Sleep(2000); // we need this to make sure the server updated the IsLogin value in the client
             if (ClientHelper.IsLoginValid())
             {
                 Application.Current.Properties["username"] = viewModel.Username;

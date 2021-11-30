@@ -295,4 +295,4 @@ F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.CopyComplete
 F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.dll
 F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.pdb
 F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.genruntimeconfig.cache
-F:\d bday\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csprojAssemblyReference.cache
+C:\Users\Bence\Documents\GitHub\master\ChatApp\ChatApp\obj\Debug\netcoreapp3.1\ChatApp.csproj.AssemblyReference.cache

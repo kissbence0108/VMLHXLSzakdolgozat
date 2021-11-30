@@ -73,12 +73,6 @@ namespace ServerApp.HelperClasses
                     {
                         if (reader.HasRows == false)
                         {
-
-                            //myPersonalGUID = new GUID();
-                            //send to server => "GUID-LOGIN-username-password";
-                            //server send => "GUID-LOGIN-TRUE"
-                            //nugget.encrypt(password)
-
                             string cmdString = "INSERT INTO Users (Username,Password) VALUES ('" + splittedContent[1] + "', '" + splittedContent[2] + "')";
                             using (SqlConnection connect = new SqlConnection(connString))
                             {
@@ -129,7 +123,6 @@ namespace ServerApp.HelperClasses
 
                 connection.Open();
                 int userId = (int)command2.ExecuteScalar();
-               // Console.WriteLine(userId);
 
                 string query = "INSERT INTO MessagesDatabase(UserID, Message, SentTime) VALUES (@userId, @message, @sentAt);";
 
@@ -149,7 +142,6 @@ namespace ServerApp.HelperClasses
             catch (Exception)
             {
                 throw;
-                //Console.WriteLine("errorxd");
             }
             finally
             {
@@ -214,6 +206,10 @@ namespace ServerApp.HelperClasses
                         if (reader.Read())
                         {
                             response = "LOGIN" + Separator + "TRUE";
+                        }
+                        else
+                        {
+                            response = "LOGIN" + Separator + "FALSE";
                         }
 
                     }

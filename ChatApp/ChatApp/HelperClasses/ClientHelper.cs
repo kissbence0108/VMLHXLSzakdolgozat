@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace ChatApp.HelperClasses
@@ -272,7 +273,7 @@ namespace ChatApp.HelperClasses
             return false;
         }
 
-        public static void SendMessage(MessageHandleEnum messageEnum, string message)
+        public static async Task SendMessage(MessageHandleEnum messageEnum, string message)
         {
             switch (messageEnum)
             {
@@ -294,7 +295,7 @@ namespace ChatApp.HelperClasses
             }
 
             message = message + Constants.EndOfTransmissionSeparator;
-            byte[] byteData = Encoding.UTF8.GetBytes(message);//Text1 + "<EOF>");
+            byte[] byteData = Encoding.UTF8.GetBytes(message);
 
             // Begin sending the data to the remote device.
             Client.BeginSend(byteData, 0, byteData.Length, 0,

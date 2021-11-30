@@ -44,8 +44,8 @@
         
         <ListBox x:Name="listBox1" 
                  Grid.Row="0" Grid.Column="1" 
-                
                  Grid.ColumnSpan="2" 
+                 ItemsSource="{Binding MessagesCollection}"
                  SelectedIndex="{Binding ListIndex,  UpdateSourceTrigger=PropertyChanged}" 
                  Foreground="White"
                  FontFamily="Dosis"
