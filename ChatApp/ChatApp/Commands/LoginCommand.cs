@@ -29,7 +29,7 @@ namespace ChatApp.Commands
         public async void Execute(object parameter)
         {
             await ClientHelper.SendMessage(MessageHandleEnum.LOGIN, Constants.Separator + viewModel.Username + Constants.Separator + ComputeSha256Hash(viewModel.Password));
-            Thread.Sleep(2000); // we need this to make sure the server updated the IsLogin value in the client
+            Thread.Sleep(2000); // We need this to make sure the server updated the IsLogin value in the client
             if (ClientHelper.IsLoginValid())
             {
                 Application.Current.Properties["username"] = viewModel.Username;

@@ -252,7 +252,6 @@ namespace ChatApp.HelperClasses
             string[] splittedContent = content.Split(Constants.Separator);
             var message = JsonConvert.DeserializeObject<Message>(splittedContent[1]);
             MessageList.Add(message);
-            //MessagesViewModel.RefreshMessageList();
         }
 
         private static void PopulateMessageList(string content)

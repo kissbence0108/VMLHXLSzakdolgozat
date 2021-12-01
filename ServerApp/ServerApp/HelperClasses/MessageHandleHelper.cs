@@ -244,17 +244,13 @@ namespace ServerApp.HelperClasses
                                 int messageNumber = Int32.Parse((element as IDataRecord).GetValue(1).ToString());
                                 graphList.Add(new Tuple<string, int>(username, messageNumber));
                             }
-
                         } while (reader.Read());
                         response = "GRAPHDATA" + Separator + JsonConvert.SerializeObject(graphList);
                     }
                 }
                 catch (Exception e)
                 {
-
                 }
-
-
             }
             return response;
         }

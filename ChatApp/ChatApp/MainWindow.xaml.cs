@@ -68,7 +68,7 @@ namespace ChatApp
             this.Close();
         }
 
-        private void DayNightbttn_Click(object sender, RoutedEventArgs e)
+        private void Bckgrndchangebttn_Click(object sender, RoutedEventArgs e)
         {
             _MainViewModel.DarkMode = !_MainViewModel.DarkMode;
         }

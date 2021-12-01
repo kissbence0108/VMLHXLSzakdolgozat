@@ -122,9 +122,11 @@ public class AsynchronousSocketListener
         try
         {
             bytesRead = handler.EndReceive(ar);
+
         }
         catch(Exception e)
         {
+            throw;
         }
 
         if (bytesRead > 0)

@@ -73,7 +73,6 @@
                 <StackPanel Orientation="Horizontal"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
-
                     <TextBox x:Name="LoginUser"
                  Text="{Binding Username, Mode=TwoWay}"
                  FontSize="20"
