@@ -25,8 +25,6 @@
         <Grid >
 
             <Grid Background="{Binding DarkMode, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BoolToBrushConverter}}">
-                
-
 
                 <Grid>
 
@@ -46,18 +44,18 @@
 
 
                     <ContentControl Content="{Binding SelectedViewModel}"
-                                Grid.Column="0"
-                                Grid.Row="2"
-                                Grid.ColumnSpan="5"
-                                Margin="70,0,0,0"/>
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    Grid.ColumnSpan="5"
+                                    Margin="70,0,0,0"/>
 
                     <Button x:Name="CloseBtn"
-                        Grid.Column="3"
-                        Grid.Row="1"
-                        Height="40"
-                        Width="40"
-                        BorderThickness="0"
-                        Style="{StaticResource closeBttn}" Click="CloseBtn_Click"  Margin="10">
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            Height="40"
+                            Width="40"
+                            BorderThickness="0"
+                            Style="{StaticResource closeBttn}" Click="CloseBtn_Click"  Margin="10">
 
                         <Button.Background>
 
@@ -68,12 +66,12 @@
                     </Button>
 
                     <Button x:Name="Bckgrndchangebttn"
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        Height="40"
-                        Width="40"
-                        BorderThickness="0"
-                        Margin="10" Click="Bckgrndchangebttn_Click">
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            Height="40"
+                            Width="40"
+                            BorderThickness="0"
+                            Margin="10" Click="Bckgrndchangebttn_Click">
 
                         <Button.Background>
 
@@ -86,14 +84,15 @@
 
 
                 </Grid>
+                
                 <Grid x:Name="navigationPanel"
                   HorizontalAlignment="Left"
                   Width="60">
 
                     <Grid.Background>
                         <ImageBrush x:Name="slidebarbckgrnd"
-                                ImageSource="Assets/greyslidebar.jpg"
-                                Stretch="None"/>
+                                    ImageSource="Assets/greyslidebar.jpg"
+                                    Stretch="None"/>
                     </Grid.Background>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="11*"/>
@@ -108,16 +107,16 @@
                     <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
                         <Grid Height="120">
                             <TextBlock Name="MenuTextblock"
-                                   Grid.Row="1"
-                                   Grid.Column="0"
-                                   Margin="75,-20,0,0"
-                                   Text="{lex:Loc}"
-                                   Foreground="White"
-                                   FontSize="20"
-                                   Background="Transparent"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Style="{StaticResource fontStyle}">
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Margin="75,-20,0,0"
+                                       Text="{lex:Loc}"
+                                       Foreground="White"
+                                       FontSize="20"
+                                       Background="Transparent"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Style="{StaticResource fontStyle}">
 
 
 
@@ -129,21 +128,21 @@
                                 </TextBlock.Effect>
                             </TextBlock>
                             <ToggleButton x:Name="tgglBttn"
-                                      Grid.Column="0"
-                                      VerticalAlignment="Center"
-                                      HorizontalAlignment="Left"
-                                      Margin="18,-20,0,0"
-                                      Height="30"
-                                      Width="30"
-                                      BorderThickness="0"
-                                      Style="{StaticResource toggleButtonStyle}"
-                                      Unchecked="tgglBttn_Unchecked"
-                                      Checked="tgglBttn_Unchecked">
+                                          Grid.Column="0"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          Margin="18,-20,0,0"
+                                          Height="30"
+                                          Width="30"
+                                          BorderThickness="0"
+                                          Style="{StaticResource toggleButtonStyle}"
+                                          Unchecked="tgglBttn_Unchecked"
+                                          Checked="tgglBttn_Unchecked">
 
                                 
                                 <ToggleButton.Background>
                                     <ImageBrush ImageSource="Assets/tgBtn_default.png"
-                                        Stretch="Fill"/>
+                                                Stretch="Fill"/>
                                 </ToggleButton.Background>
 
                                 <ToggleButton.Triggers>
@@ -182,19 +181,23 @@
                         </Grid>
 
                         <ListView x:Name="listView"
-                              Background="Transparent"
-                              BorderBrush="Transparent"
-                              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                  Background="Transparent"
+                                  BorderBrush="Transparent"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                             <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
+                                          Margin="0,0,0,20" 
+                                          MouseEnter="ListViewItem_MouseEnter">
 
                                 <StackPanel Orientation="Horizontal"
-                                        Width="230">
+                                            Width="230">
 
                                     <Image Source="Assets/icons8-house-96.png"
-                                               Stretch="Fill"
-                                               Margin="5,0,0,0" Height="42" Width="42" VerticalAlignment="Stretch">
+                                           Stretch="Fill"
+                                           Margin="5,0,0,0" 
+                                           Height="42" 
+                                           Width="42" 
+                                           VerticalAlignment="Stretch">
 
                                         <Image.InputBindings>
                                             <MouseBinding Gesture="LeftClick" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
@@ -203,17 +206,17 @@
                                     </Image>
 
                                     <TextBlock Name="HomeTextBlock"
-                                           Text="{lex:Loc}"
-                                           Margin="25,0,0,0"
-                                           Style="{StaticResource fontStyle}"/>
+                                               Text="{lex:Loc}"
+                                               Margin="25,0,0,0"
+                                               Style="{StaticResource fontStyle}"/>
 
 
                                 </StackPanel>
 
                                 <ListViewItem.ToolTip>
                                     <ToolTip x:Name="tooltip_home"
-                                         Content="Home"
-                                         Style="{StaticResource tltpStyle}"/>
+                                             Content="Home"
+                                             Style="{StaticResource tltpStyle}"/>
 
                                 </ListViewItem.ToolTip>
 
@@ -225,7 +228,7 @@
                                       Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
 
                                 <StackPanel Orientation="Horizontal"
-                                        Width="230">
+                                            Width="230">
 
                                     <Image Source="Assets/icons8-messages-96.png"
                                                Stretch="Fill"
@@ -238,16 +241,16 @@
                                     </Image>
 
                                     <TextBlock Name="MessagesTextBlock"
-                                            Text="{lex:Loc}"
-                                           Margin="25,0,0,0"
-                                           Style="{StaticResource fontStyle}"/>
+                                               Text="{lex:Loc}"
+                                               Margin="25,0,0,0"
+                                               Style="{StaticResource fontStyle}"/>
 
                                 </StackPanel>
 
                                 <ListViewItem.ToolTip>
                                     <ToolTip x:Name="tooltip_messages"
-                                         Content="Messages"
-                                         Style="{StaticResource tltpStyle}"/>
+                                             Content="Messages"
+                                             Style="{StaticResource tltpStyle}"/>
 
                                 </ListViewItem.ToolTip>
 
@@ -258,7 +261,7 @@
                                       Margin="0,0,0,20" MouseEnter="ListViewItem_MouseEnter">
 
                                 <StackPanel Orientation="Horizontal"
-                                        Width="230">
+                                            Width="230">
 
                                     <Image Source="Assets/icons8-pie-chart-96.png"
                                                Stretch="Fill"
@@ -271,34 +274,28 @@
                                     </Image>
 
                                     <TextBlock Name="GraphsTextBlock"
-                                        Text="{lex:Loc}"
-                                           Margin="25,0,0,0"
-                                           
-                                           Style="{StaticResource fontStyle}"/>
+                                               Text="{lex:Loc}"
+                                               Margin="25,0,0,0"
+                                               Style="{StaticResource fontStyle}"/>
 
                                 </StackPanel>
 
                                 <ListViewItem.ToolTip>
                                     <ToolTip x:Name="tooltip_graphs"
-                                         Content="Graphs"
-                                         Style="{StaticResource tltpStyle}"/>
+                                             Content="Graphs"
+                                             Style="{StaticResource tltpStyle}"/>
 
                                 </ListViewItem.ToolTip>
 
-
                             </ListViewItem>
 
-
                         </ListView>
-
-
 
                     </StackPanel>
 
                 </Grid>
+                
             </Grid>
-
-
 
         </Grid>
 

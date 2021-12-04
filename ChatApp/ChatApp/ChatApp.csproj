@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\daynight.png" />
     <None Remove="Assets\greybackground.jpg" />
     <None Remove="Assets\greyslidebar.jpg" />
     <None Remove="Assets\icons8-close-window-96.png" />
@@ -40,7 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\daynight.png" />
     <Resource Include="Assets\greybackground.jpg" />
     <Resource Include="Assets\greyslidebar.jpg" />
     <Resource Include="Assets\icons8-close-window-96.png" />

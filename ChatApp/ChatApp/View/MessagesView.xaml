@@ -62,7 +62,5 @@
                 Height="18"
                 Click="Button_Click"/>
 
-
-
     </Grid>
 </UserControl>

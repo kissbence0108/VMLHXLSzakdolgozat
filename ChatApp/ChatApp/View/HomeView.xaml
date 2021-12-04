@@ -14,7 +14,7 @@
     <Grid Margin="15">
 
         <TextBlock Name="HomeText"
-                    Text="{lex:Loc}"
+                   Text="{lex:Loc}"
                    FontSize="32"
                    Foreground="White"
                    FontWeight="Bold"

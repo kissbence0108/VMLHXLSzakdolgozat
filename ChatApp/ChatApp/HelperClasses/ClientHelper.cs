@@ -239,7 +239,7 @@ namespace ChatApp.HelperClasses
                     MessageBox.Show("Registration was not possible!");
                     break;
                 case "USERALREADYEXISTS":
-                    MessageBox.Show("Sorry but the username already exist in the database!");
+                    MessageBox.Show("Sorry but the username is already exist!");
                     break;
                 default:
                     break;

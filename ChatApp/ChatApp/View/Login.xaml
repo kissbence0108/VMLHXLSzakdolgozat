@@ -74,71 +74,73 @@
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
                     <TextBox x:Name="LoginUser"
-                 Text="{Binding Username, Mode=TwoWay}"
-                 FontSize="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Foreground="White"
-                 Grid.Column="2"
-                 Grid.Row="2"
-                 Background="#363a40"
-                 FontFamily="Dosis"
-                 BorderThickness="0"
-                 Width="250"
-                 HorizontalContentAlignment="Center"
-                 Opacity="0.5"
-                 Height="25"
-                             />
+                             Text="{Binding Username, Mode=TwoWay}"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Foreground="White"
+                             Grid.Column="2"
+                             Grid.Row="2"
+                             Background="#363a40"
+                             FontFamily="Dosis"
+                             BorderThickness="0"
+                             Width="250"
+                             HorizontalContentAlignment="Center"
+                             Opacity="0.5"
+                             Height="25"/>
 
                 </StackPanel>
 
                 <Border Width="100"
-                 Height="2"
-                 Background="White"
-                    Opacity="0.5"/>
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+                
             </StackPanel>
 
 
 
             <TextBlock Name="PasswordTextBlock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="3"
                        FontFamily="#Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Style="{StaticResource fontStyle}"/>
 
 
 
             <StackPanel Grid.Row="4"
                         Grid.Column="2">
+                
                 <StackPanel Orientation="Horizontal"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
 
                     <PasswordBox x:Name="LoginPasswordBox"
-                 PasswordChanged="LoginPassword_PasswordChanged"
-                 FontSize="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Foreground="White"
-                 Grid.Column="2"
-                 Grid.Row="4"
-                 Background="#363a40"
-                 FontFamily="Dosis"
-                 BorderThickness="0"
-                 Width="250"
-                 HorizontalContentAlignment="Center"
-                 Opacity="0.5"
-                 Height="25"/>
+                                 PasswordChanged="LoginPassword_PasswordChanged"
+                                 FontSize="20"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Foreground="White"
+                                 Grid.Column="2"
+                                 Grid.Row="4"
+                                 Background="#363a40"
+                                 FontFamily="Dosis"
+                                 BorderThickness="0"
+                                 Width="250"
+                                 HorizontalContentAlignment="Center"
+                                 Opacity="0.5"
+                                 Height="25"/>
 
                 </StackPanel>
 
                 <Border Width="100"
-                 Height="2"
-                 Background="White"
-                    Opacity="0.5"/>
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+                
             </StackPanel>
 
 

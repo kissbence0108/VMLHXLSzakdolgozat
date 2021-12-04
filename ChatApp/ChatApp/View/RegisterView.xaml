@@ -44,120 +44,121 @@
             </Grid.RowDefinitions>
 
             <TextBlock Name="RegistertextTextBlock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Grid.Column="0"
-                     Grid.Row="0"
-                     Grid.ColumnSpan="2"
-                     Grid.RowSpan="2"
-                     Margin="12,0,0,0"
-                     FontFamily="Dosis"
-                     Style="{DynamicResource fontStyle}"/>
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       Grid.RowSpan="2"
+                       Margin="12,0,0,0"
+                       FontFamily="Dosis"
+                       Style="{DynamicResource fontStyle}"/>
 
 
 
 
             <TextBlock Name="UsernameTextblock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
-                     Grid.Column="2"
-                     Grid.Row="1"
-                     FontFamily="Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Grid.Column="2"
+                       Grid.Row="1"
+                       FontFamily="Dosis"
+                       Style="{StaticResource fontStyle}"/>
 
 
             <StackPanel Grid.Row="2"
                         Grid.Column="2">
+                
                 <StackPanel Orientation="Horizontal"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
 
                     <TextBox x:Name="RegisterUser"
-                 Text="{Binding Username, Mode=TwoWay}"
-                 FontSize="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Foreground="White"
-                 Grid.Column="2"
-                 Grid.Row="2"
-                 Background="#363a40"
-                 FontFamily="Dosis"
-                 BorderThickness="0"
-                 Width="250"
-                 HorizontalContentAlignment="Center"
-                 Opacity="0.5"
-                 Height="25"
-                             />
+                             Text="{Binding Username, Mode=TwoWay}"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Foreground="White"
+                             Grid.Column="2"
+                             Grid.Row="2"
+                             Background="#363a40"
+                             FontFamily="Dosis"
+                             BorderThickness="0"
+                             Width="250"
+                             HorizontalContentAlignment="Center"
+                             Opacity="0.5"
+                             Height="25"/>
 
                 </StackPanel>
 
                 <Border Width="100"
-                 Height="2"
-                 Background="White"
-                    Opacity="0.5"/>
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+                
             </StackPanel>
 
 
             <TextBlock Name="PasswordTextBlock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="3"
                        FontFamily="Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Style="{StaticResource fontStyle}"/>
 
             <TextBlock Name="PasswordRestrictions"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="4"
                        FontSize="10"
                        FontFamily="Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Style="{StaticResource fontStyle}"/>
 
 
             <StackPanel Grid.Row="5"
                         Grid.Column="2">
+                
                 <StackPanel Orientation="Horizontal"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
 
                     <PasswordBox x:Name="RegisterPasswordBox"
-                    PasswordChanged="RegisterPasswordBox_PasswordChanged"
-                    FontSize="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Foreground="White"
-                 Grid.Column="2"
-                 Grid.Row="4"
-                 Background="#363a40"
-                 BorderThickness="0"
-                 Width="250"
-                 FontFamily="Dosis"
-                 HorizontalContentAlignment="Center"
-                 Opacity="0.5"
-                 Height="25"/>
-
+                                  PasswordChanged="RegisterPasswordBox_PasswordChanged"
+                                  FontSize="20"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Foreground="White"
+                                  Grid.Column="2"
+                                  Grid.Row="4"
+                                  Background="#363a40"
+                                  BorderThickness="0"
+                                  Width="250"
+                                  FontFamily="Dosis"
+                                  HorizontalContentAlignment="Center"
+                                  Opacity="0.5"
+                                  Height="25"/>
                 </StackPanel>
 
                 <Border Width="100"
-                 Height="2"
-                 Background="White"
-                    Opacity="0.5"/>
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
             </StackPanel>
 
             <TextBlock Name="ConfirmPasswordTextBlock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
-                     Grid.Column="2"
-                     Grid.Row="6"  
-                     FontFamily="Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Text="{lex:Loc}"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Column="2"
+                        Grid.Row="6"  
+                        FontFamily="Dosis"
+                        Style="{StaticResource fontStyle}"/>
 
 
             <StackPanel Grid.Row="7"
@@ -167,38 +168,38 @@
                             HorizontalAlignment="Center">
 
                     <PasswordBox x:Name="RegisterPasswordConfirmBox"
-                    PasswordChanged="RegisterPasswordConfirmBox_PasswordChanged"
-                    FontSize="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Foreground="White"
-                 Grid.Column="2"
-                 Grid.Row="6"
-                 Background="#363a40"
-                 BorderThickness="0"
-                 Width="250"
-                 HorizontalContentAlignment="Center"
-                 FontFamily="Dosis"
-                 Opacity="0.5"
-                 Height="25"/>
+                                   PasswordChanged="RegisterPasswordConfirmBox_PasswordChanged"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="White"
+                                   Grid.Column="2"
+                                   Grid.Row="6"
+                                   Background="#363a40"
+                                   BorderThickness="0"
+                                   Width="250"
+                                   HorizontalContentAlignment="Center"
+                                   FontFamily="Dosis"
+                                   Opacity="0.5"
+                                   Height="25"/>
 
                 </StackPanel>
 
                 <Border Width="100"
-                 Height="2"
-                 Background="White"
-                    Opacity="0.5"/>
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
             </StackPanel>
 
 
             <TextBlock Name="RegisterHereTextBlock"
-                    Text="{lex:Loc}"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
+                       Text="{lex:Loc}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
                        Grid.Column="2"
                        Grid.Row="8"
                        FontFamily="Dosis"
-                     Style="{StaticResource fontStyle}"/>
+                       Style="{StaticResource fontStyle}"/>
 
 
             <Button Content="{lex:Loc}" 
